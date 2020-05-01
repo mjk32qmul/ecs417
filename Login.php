@@ -17,10 +17,11 @@
             echo "name = " .$_SESSION["username"];
             echo "password = " .$_SESSION["password"];
 
-            $dbhost = getenv("172.31.4.56");
-            $dbuser = getenv("admin");
-            $dbpwd = getenv("password");
-            $dbname = getenv("ecs417");
+            $dbhost = getenv("MYSQL_SERVICE_HOST");
+            $dbport = getenv("MYSQL_SERVICE_PORT");
+            $dbuser = getenv("DATABASE_USER");
+            $dbpwd = getenv("DATABASE_PASSWORD");
+            $dbname = getenv("DATABASE_NAME"); 
             // Creates connection
             $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
             // Checks connection
