@@ -17,7 +17,7 @@
             echo "name = " .$_SESSION["username"];
             echo "password = " .$_SESSION["password"];
 
-            $dbhost = getenv("127.0.0.1");
+            $dbhost = getenv("MYSQL_SERVICE_HOST");
             $dbuser = getenv("admin");
             $dbpwd = getenv("password");
             $dbname = getenv("ecs417");
@@ -26,6 +26,9 @@
             // Checks connection
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
+            }
+            else{
+                echo "Connection sucessful";
             }
         ?>
     </body>
