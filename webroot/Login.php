@@ -16,6 +16,20 @@
             $_SESSION["password"] = "password";
             echo "name = " .$_SESSION["username"];
             echo "password = " .$_SESSION["password"];
+
+            $dbhost = getenv("127.0.0.1");
+            $dbuser = getenv("admin");
+            $dbpwd = getenv("password");
+            $dbname = getenv("ecs417");
+            // Creates connection
+            $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+            // Checks connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+            else{
+                echo "Connection sucessful";
+            }
         ?>
     </body>
 </html>
