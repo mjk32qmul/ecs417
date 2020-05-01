@@ -12,11 +12,6 @@
     </head>
     <body>
         <?php
-            $_SESSION["username"] = "username";
-            $_SESSION["password"] = "password";
-            echo "name = " .$_SESSION["username"];
-            echo "password = " .$_SESSION["password"];
-
             $dbhost = getenv("MYSQL_SERVICE_HOST");
             $dbport = getenv("MYSQL_SERVICE_PORT");
             $dbuser = getenv("DATABASE_USER");
@@ -31,6 +26,21 @@
             else{
                 echo "Connection sucessful";
             }
+
+            $password = "";
+            $username = "";
+            
+            $sql = "SELECT userName, password FROM USERS";
+            $result = $conn->query($sql);
+            echo .$result;
+            if ($result->num_rows > 0){
+                echo "correct";
+            }
+
+            /*$_SESSION["username"] = "username";
+            $_SESSION["password"] = "password";
+            echo "name = " .$_SESSION["username"];
+            echo "password = " .$_SESSION["password"];*/
         ?>
     </body>
 </html>
