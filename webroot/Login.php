@@ -17,7 +17,7 @@
             echo "name = " .$_SESSION["username"];
             echo "password = " .$_SESSION["password"];
 
-            $dbhost = getenv("127.0.0.1");
+            $dbhost = getenv("172.31.4.56");
             $dbuser = getenv("admin");
             $dbpwd = getenv("password");
             $dbname = getenv("ecs417");
