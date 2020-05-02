@@ -7,10 +7,5 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <form action="Login.php" method="post">
-            username: <input type="text" name="username"><br>
-            password: <input type="password" name="password"><br>
-            <input type="submit">
-        </form>
     </body>
 </html>
