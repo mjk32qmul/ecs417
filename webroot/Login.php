@@ -1,10 +1,8 @@
 <?php
     session_start();
-?>
-
-<?php
+    
     $dbhost = getenv("MYSQL_SERVICE_HOST");
-    $dbport = getenv("MYSQL_SERVICE_PORT");
+    //$dbport = getenv("MYSQL_SERVICE_PORT");
     $dbuser = getenv("DATABASE_USER");
     $dbpwd = getenv("DATABASE_PASSWORD");
     $dbname = getenv("DATABASE_NAME"); 
@@ -14,26 +12,22 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    else{
-        echo "Connection sucessful\n<br>";
-    }
 
     $password = "Bananas Ar3 V3ry tasty!";
     $username = "Matthew-King";
 
     $password = $_POST["password"];
     $username = $_POST["username"];
-    
-    $sql = "SELECT ID, username, password, firstname, lastname, email FROM USERS WHERE
-    username='".$username."'";
     $sha256pass = crypt($password, '$5$anexamplestringforsalt$');
-    echo $sql. "\n<br>";
+
+    $sql = "SELECT ID, username, password, firstname, lastname, email FROM USERS WHERE
+    username='".$username."'"."AND password = '".$sha256pass."'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            if ($row["password"] == $sha256pass){
+            //if ($row["password"] == $sha256pass){
                 echo "You're logged in as ".$row["username"];
                 $_SESSION["ID"] = $row["ID"];
                 $_SESSION["username"] = $row["username"];
@@ -43,9 +37,11 @@
                 $_SESSION["password"] = $row["password"];
                 $_SESSION["loggedIn"] = true;
                 header("Location: Blog.php");
-            }
+            //}
         }
-    } else {echo "sorry but the wasn't correct";}
+    } else {
+        header("Location: Login.html");
+    }
     $conn->close();
 ?>
 
