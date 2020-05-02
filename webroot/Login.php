@@ -29,6 +29,9 @@
 
             $password = "Bananas Ar3 V3ry tasty!";
             $username = "Matthew-King";
+
+            $password = $_POST["password"];
+            $username = $_POST["username"];
             
             $sql = "SELECT ID, username, password, firstname, lastname, email FROM USERS WHERE
             username='".$username."'";
@@ -48,6 +51,7 @@
                         $_SESSION["email"] = $row["email"];
                         $_SESSION["password"] = $row["password"];
                         $_SESSION["loggedIn"] = true;
+                        die("./Blog.php");
                     }
                 }
             } else {echo "sorry but the wasn't correct";}
