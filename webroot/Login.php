@@ -38,22 +38,19 @@
 
             if ($result->num_rows > 0) {
                 // output data of each row
-                echo "got em";
                 while($row = $result->fetch_assoc()) {
                     if ($row["password"] == $sha256pass){
-                        echo "id: " . $row["username"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. " - Email " . $row["email"]. " - Password " . $row["password"]."<br>";
+                        $_SESSION["ID"] = $row["ID"];
+                        $_SESSION["username"] = $username;
+                        $_SESSION["firstname"] = $row["firstname"];
+                        $_SESSION["lastname"] = $row["lastname"];
+                        $_SESSION["email"] = $row["email"];
+                        $_SESSION["password"] = $row["password"];
+                        $_SESSION["loggedIn"] = true;
                     }
                 }
-            } else {
-                echo "0 results";
-            }
+            } else {echo "sorry but the wasn't correct"}
             $conn->close();
-
-
-            /*$_SESSION["username"] = "username";
-            $_SESSION["password"] = "password";
-            echo "name = " .$_SESSION["username"];
-            echo "password = " .$_SESSION["password"];*/
         ?>
     </body>
 </html>
