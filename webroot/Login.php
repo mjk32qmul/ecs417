@@ -25,22 +25,17 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // output data of each row
         while($row = $result->fetch_assoc()) {
-            //if ($row["password"] == $sha256pass){
-                echo "You're logged in as ".$row["username"];
-                $_SESSION["ID"] = $row["ID"];
-                $_SESSION["username"] = $row["username"];
-                $_SESSION["firstname"] = $row["firstname"];
-                $_SESSION["lastname"] = $row["lastname"];
-                $_SESSION["email"] = $row["email"];
-                $_SESSION["password"] = $row["password"];
-                $_SESSION["loggedIn"] = true;
-                header("Location: Blog.php");
-            //}
+            echo "You're logged in as ".$row["username"];
+            $_SESSION["ID"] = $row["ID"];
+            $_SESSION["username"] = $row["username"];
+            $_SESSION["firstname"] = $row["firstname"];
+            $_SESSION["lastname"] = $row["lastname"];
+            $_SESSION["email"] = $row["email"];
+            $_SESSION["password"] = $row["password"];
+            $_SESSION["loggedIn"] = true;
+            header("Location: Blog.php");
         }
-    } else {
-        header("Location: Login.html");
     }
     $conn->close();
 ?>
@@ -54,5 +49,10 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
+        <?php
+        if (!$_SESSION["loggedIn"]){
+            echo "an error has occured please try again";
+        }
+        ?>
     </body>
 </html>
