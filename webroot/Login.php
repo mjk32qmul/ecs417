@@ -40,8 +40,9 @@
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
                     if ($row["password"] == $sha256pass){
+                        echo "You're logged in as ".$row["username"];
                         $_SESSION["ID"] = $row["ID"];
-                        $_SESSION["username"] = $username;
+                        $_SESSION["username"] = $row["username"];
                         $_SESSION["firstname"] = $row["firstname"];
                         $_SESSION["lastname"] = $row["lastname"];
                         $_SESSION["email"] = $row["email"];
@@ -49,7 +50,7 @@
                         $_SESSION["loggedIn"] = true;
                     }
                 }
-            } else {echo "sorry but the wasn't correct"}
+            } else {echo "sorry but the wasn't correct";}
             $conn->close();
         ?>
     </body>
