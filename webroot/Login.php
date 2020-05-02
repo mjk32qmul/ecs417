@@ -30,7 +30,9 @@
             $password = "Bananas Ar3 V3ry tasty!";
             $username = "Matthew King";
             
-            $sql = "SELECT username, password, firstname, lastname, email FROM USERS WHERE username=\'".$username."\',password=\'".crypt($password, '$5$anexamplestringforsalt$')."\'";
+            $sql = "SELECT username, password, firstname, lastname, email FROM USERS WHERE
+            username='".$username."'";
+            $sha256pass = crypt($password, '$5$anexamplestringforsalt$');
             echo $sql. "\n<br>";
             $result = $conn->query($sql);
 
@@ -38,7 +40,9 @@
                 // output data of each row
                 echo "got em";
                 while($row = $result->fetch_assoc()) {
-                    echo "id: " . $row["username"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. " - Email " . $row["email"]. " - Password " . $row["password"]."<br>";
+                    if ($row["password"] == $sha256pass){
+                        echo "id: " . $row["username"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. " - Email " . $row["email"]. " - Password " . $row["password"]."<br>";
+                    }
                 }
             } else {
                 echo "0 results";
