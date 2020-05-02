@@ -28,7 +28,7 @@
             }
 
             $password = "Bananas Ar3 V3ry tasty!";
-            $username = "Matthew King";
+            $username = "Matthew-King";
             
             $sql = "SELECT username, password, firstname, lastname, email FROM USERS WHERE
             username='".$username."'";
