@@ -30,7 +30,7 @@
             $password = "Bananas Ar3 V3ry tasty!";
             $username = "Matthew King";
             
-            $sql = "SELECT username, password, firstname, lastname, email FROM USERS WHERE username=".$username."password=".crypt($password, '$5$anexamplestringforsalt$');
+            $sql = "SELECT username, password, firstname, lastname, email FROM USERS WHERE username=".$username.",password=".crypt($password, '$5$anexamplestringforsalt$');
             echo $sql. "\n<br>";
             $result = $conn->query($sql);
 
