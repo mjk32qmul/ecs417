@@ -15,7 +15,7 @@
                 <textarea id="help" rows="15" cols="100"></textarea><br>
                 <input type="submit">
             </form>
-        <?php else ?>
+        <?php if (!$_SESSION["loggedIn"]) ?>
             <h>Sorry you're not logged in so can't make a post</h>
     </body>
 </html>
