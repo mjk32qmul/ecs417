@@ -51,7 +51,7 @@
                         $_SESSION["email"] = $row["email"];
                         $_SESSION["password"] = $row["password"];
                         $_SESSION["loggedIn"] = true;
-                        die("Blog.php");
+                        header("Blog.php")
                     }
                 }
             } else {echo "sorry but the wasn't correct";}
