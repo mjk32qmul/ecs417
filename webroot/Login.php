@@ -30,7 +30,7 @@
             $password = "Bananas Ar3 V3ry tasty!";
             $username = "Matthew King";
             
-            $sql = "SELECT username, password, firstname, lastname, email FROM USERS WHERE username=".$username.",password=".crypt($password, '$5$anexamplestringforsalt$');
+            $sql = "SELECT username, password, firstname, lastname, email FROM USERS WHERE username=\'".$username."\',password=\'".crypt($password, '$5$anexamplestringforsalt$')."\'";
             echo $sql. "\n<br>";
             $result = $conn->query($sql);
 
@@ -44,17 +44,6 @@
                 echo "0 results";
             }
             $conn->close();
-
-            // 2 character salt
-
-            // 16 character salt starting with $5$. The default number of rounds is 5000.
-            if (CRYPT_SHA256 == 1)
-            {
-            echo "SHA-256: ".crypt('Bananas Ar3 V3ry tasty!','$5$anexamplestringforsalt$')."\n<br>"; }
-            else
-            {
-            echo "SHA-256 not supported.\n<br>";
-            }
 
 
             /*$_SESSION["username"] = "username";
