@@ -34,7 +34,7 @@
             $_SESSION["email"] = $row["email"];
             $_SESSION["password"] = $row["password"];
             $_SESSION["loggedIn"] = true;
-            header("Location: Blog.php");
+            header("Location: addpost.php");
         }
     }
     $conn->close();
