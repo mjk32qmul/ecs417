@@ -17,7 +17,6 @@
                 </ul>
             </nav>
         </div>
-
         <div class="middle">
             <div class="about">
                 <img src="https://media.istockphoto.com/photos/portrait-of-smiling-handsome-man-in-blue-tshirt-standing-with-crossed-picture-id1045886560?k=6&m=1045886560&s=612x612&w=0&h=hXrxai1QKrfdqWdORI4TZ-M0ceCVakt4o6532vHaS3I=" />
@@ -32,7 +31,6 @@
                 <p><b>2019-2022</b> BSc Computer Science</p>
             </div>
         </div>
-
         <aside id="left">
             <div class="reaserch">
                 <h2>Reaserch Interests</h2>
@@ -42,7 +40,6 @@
                     <li>Artifical Intelligence</li>
                 </ul>
             </div>
-
             <div class="links">
                 <nav>
                     <ul id="menuside">
@@ -53,7 +50,6 @@
                     </ul>
                 </nav>
             </div>
-
             <div class="skills">
                 <h2>Top 3 Skills</h2>
                 <ul>
@@ -63,7 +59,6 @@
                 </ul>
             </div>
         </aside>
-
         <aside id="right">
             <div class="hobbies">
                 <h2>Hobbies</h2>
@@ -74,7 +69,6 @@
                     <li>Badminton</li>
                 </ul>
             </div>
-
             <div class="movies">
                 <h2>Top 5 Movies</h2>
                 <ul>

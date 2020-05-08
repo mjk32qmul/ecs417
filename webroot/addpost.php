@@ -1,5 +1,8 @@
 <?php
     session_start();
+ 	if (!$_SESSION["loggedIn"]){
+		header("Location: Login.php")
+	}
 ?>
 <!Doctype html>
 <html>
@@ -10,12 +13,9 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <?php if ($_SESSION["loggedIn"]) ?>
             <form action="submitPost.php" method="post">
-                <textarea id="help" rows="15" cols="100"></textarea><br>
+                <textarea id="Text" rows="15" cols="100"></textarea><br>
                 <input type="submit">
             </form>
-        <?php if (!$_SESSION["loggedIn"]) ?>
-            <h>Sorry you're not logged in so can't make a post</h>
     </body>
 </html>

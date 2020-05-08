@@ -13,8 +13,8 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $password = "Bananas Ar3 V3ry tasty!";
-    $username = "Matthew-King";
+    //$password = "Bananas Ar3 V3ry tasty!";
+    //$username = "Matthew-King";
 
     $password = $_POST["password"];
     $username = $_POST["username"];
