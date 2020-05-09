@@ -5,7 +5,7 @@
 	}
 	else{
 		$postContents = $_POST["Text"];
-		$sqlQuery = "INSERT INTO POSTS (username, time, contents) VALUES('".$_SESSION["username"]."', '".date_timestamp_get(date_create())."','".$postContents."')";
+		$sqlQuery = "INSERT INTO POSTS (username,  contents) VALUES('".$_SESSION["username"]."','".$postContents."')";
 		$dbhost = getenv("MYSQL_SERVICE_HOST");
 		//$dbport = getenv("MYSQL_SERVICE_PORT");
 		$dbuser = getenv("DATABASE_USER");
