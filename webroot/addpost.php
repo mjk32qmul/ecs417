@@ -14,7 +14,7 @@
     </head>
     <body>
             <form action="submitPost.php" method="post">
-                <textarea id="Text" rows="15" cols="100"></textarea><br>
+                <textarea name="Text" rows="15" cols="100"></textarea><br>
                 <input type="submit">
             </form>
     </body>
