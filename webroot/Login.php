@@ -51,7 +51,7 @@
         <meta charset="UTF-8" />
         <title>My Site</title>
         <link rel="stylesheet" type="text/css" href="webroot/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="weebroot/css/style.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/style.css">
     </head>
     <body>
         <?php
