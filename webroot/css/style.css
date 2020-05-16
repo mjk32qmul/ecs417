@@ -1,90 +1,63 @@
-body {
-    font: 100% "Lato", sans-serif;
+/* CSS Document */
+
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-
-li {
-    display: block;
-    padding: 2%;
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
-.nav {
-    overflow: hidden;
-    width: 100%;
-    background-color: lightgreen;
+button:hover {
+  opacity: 0.8;
 }
 
-    .nav li, h1 {
-        float: left;
-        padding: 2%;
-        text-align: center;
-        color: black;
-        
-    }
-
-    .nav h1 {
-        font: 200% "Lato", sans-serif;
-    }
-
-.about, .education {
-    position: absolute;
-    left: 25%;
-    max-width: 90%;
-    max-height: 50%;
-    padding: 1.5%;
-    width: 50%;
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
 }
 
-.about img{
-    float: right;
-    max-width: 50%;
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
 }
 
-.education {
-    top: 45%;
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
 }
 
-aside {
-    max-width: 25%;
-    position: absolute;
-    width: 15em;
+.container {
+  padding: 16px;
 }
 
-    aside#left {
-        left: 0%;
-    }
-
-    aside#right {
-        right: 0%;
-    }
-
-
-.reaserch, .skills, .links, .hobbies, .movies {
-    padding: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    background-color: whitesmoke;
+span.psw {
+  float: right;
+  padding-top: 16px;
 }
 
-.reaserch {
-    color: darksalmon;
-    background-color: antiquewhite;
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
 }
-
-.links {
-    color: darkmagenta;
-}
-
-.skills h2, .hobbies h2, .movies h2 {
-    background-color: lightgreen;
-    padding: 2%;
-}
-
-.skills li, .hobbies li, .movies li {
-    background-color: white;
-}
-
-.skills img {
-    float: left;
-}
-
