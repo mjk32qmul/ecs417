@@ -4,8 +4,8 @@
 		header("Location: Login.php");
 	}
 	else{
-		$postContents = $_POST["Text"];
-		echo $postContents;
+		$postContents = $_POST["message"];
+		echo "You sent message: ".$postContents;
 		$sqlQuery = "INSERT INTO POSTS (username,  contents) VALUES('".$_SESSION["username"]."','".$postContents."')";
 		$dbhost = getenv("MYSQL_SERVICE_HOST");
 		//$dbport = getenv("MYSQL_SERVICE_PORT");
