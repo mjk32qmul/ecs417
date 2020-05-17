@@ -12,6 +12,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 	$sqlQuery = "SELECT * FROM POSTS";
+	echo .$sqlQuery;
 	$result = $conn->query($sql);
 	$entries = array();
 
