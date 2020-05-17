@@ -11,7 +11,7 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
-	$sqlQuery = "SELECT * FROM POSTS ORDER BY ID DESC";
+	$sqlQuery = "SELECT * FROM POSTS";
 	$result = $conn->query($sql);
 	$entries = array();
 
