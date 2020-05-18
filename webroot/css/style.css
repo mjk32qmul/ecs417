@@ -82,4 +82,5 @@ form{
 	max-width: 98%;
 	min-width: 98%;
 	padding: 1%;
+	white-space: pre-wrap;
 }
