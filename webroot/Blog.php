@@ -37,8 +37,8 @@
 			<?php
 				for ($row = 0; $row < count($entries); $row++){
 					echo "<section id='post'>";
-					echo "<p><span id='username'>".$entries[$row][1]."</span>";
-					echo "<span id='time'>(".$entries[$row][0].")</span></p>";
+					echo "<p><span id='username'>".$entries[$row][1]."</span>  ";
+					echo "  <span id='time'>(".$entries[$row][0].")</span></p>";
 					echo "<p id='contents'>".$entries[$row][2]."</p>";
 					echo "</section>";
 					echo "<br/>";
