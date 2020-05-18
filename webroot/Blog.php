@@ -21,7 +21,8 @@
 			$time = $result["time"];
 			$username = $result["username"];
 			$contents = $result["contents"];
-			echo $time. ":".$username.":".$contents;
+			$date = date("Y/m/d h:i:sa", $time);
+			echo $time. ":".$username.":".$contents.":".$date;
 			$tmp = array();
 			array_push($entries, $tmp);
 		}
