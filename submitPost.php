@@ -6,6 +6,7 @@
 	else{
 		$postContents = $_POST["message"];
 		echo "You sent message: ".$postContents;
+		echo $_POST["message"];
 		$sqlQuery = "INSERT INTO POSTS (username,  contents) VALUES('".$_SESSION["username"]."','".$postContents."')";
 		$dbhost = getenv("MYSQL_SERVICE_HOST");
 		//$dbport = getenv("MYSQL_SERVICE_PORT");
@@ -33,8 +34,8 @@
     <head>
         <meta charset="UTF-8" />
         <title>My Site</title>
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/style.css">
     </head>
     <body>
     </body>
