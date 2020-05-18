@@ -63,8 +63,8 @@ form{
 }
 
 #post{
-	background-color: black;
-	color: white;
+	background-color: #d8e6e6;
+	color: #2a2b2b;
 	padding: 2%;
 }
 
@@ -80,6 +80,5 @@ form{
 	max-width: 98%;
 	min-width: 98%;
 	padding: 1%;
-	color: black;
-	background-color: white;
+	background-color: #f0f2f2;
 }
