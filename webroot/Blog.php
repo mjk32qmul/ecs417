@@ -34,13 +34,20 @@
     <body>
 		<article id='blog'>
 			<?php
-				for ($row = 0; $row < count($entries); $row++){
+				if (count($entries) > 0){
 					echo "<section id='post'>";
-					echo "<p><span id='username'>".$entries[$row][1]."</span>  ";
-					echo "  <span id='time'>(".$entries[$row][0].")</span></p><br/>";
-					echo "<p id='contents'>".$entries[$row][2]."</p>";
+					echo "<p id='contents'>Sorry but there are no posts at the moment. Please check back again later</p>";
 					echo "</section>";
-					echo "<br/>";
+				}
+				else{
+					for ($row = 0; $row < count($entries); $row++){
+						echo "<section id='post'>";
+						echo "<p><span id='username'>".$entries[$row][1]."</span>  ";
+						echo "  <span id='time'>(".$entries[$row][0].")</span></p><br/>";
+						echo "<p id='contents'>".$entries[$row][2]."</p>";
+						echo "</section>";
+						echo "<br/>";
+					}
 				}
 			?>
 		</article>
