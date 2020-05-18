@@ -77,9 +77,10 @@ form{
 }
 
 #contents{
-	max-width: 80%;
-	min-width: 80%;
-	left: 10%;
+	max-width: 98%;
+	min-width: 98%;
+	left: 1%;
+	top: 5%;
 	position: absolute;
 	color: black;
 	background-color: white;
