@@ -11,12 +11,12 @@
             <nav>
                 <h1 class="home">Matthew King</h1>
                 <ul>
-                    <li href="#home">Experience</li>
-                    <li href="#education">Education</li>
-                    <li href="#skills">Skills</li>
-					<li href="Login.php">Login</li>
-					<li href="addpost.php">Add Post</li>
-					<li href="Blog.php">Blog</li>
+					<li><a href="#home">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+					<li><a href="Login.php">Login</a></li>
+					<li><a href="addpost.php">Add Post</a></li>
+					<li><a href="Blog.php">Blog</a></li>
                 </ul>
             </nav>
         </div>
