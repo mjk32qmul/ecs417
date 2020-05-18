@@ -1,5 +1,4 @@
 <?php
-
 	$dbhost = getenv("MYSQL_SERVICE_HOST");
 	//$dbport = getenv("MYSQL_SERVICE_PORT");
 	$dbuser = getenv("DATABASE_USER");
@@ -38,7 +37,7 @@
 				for ($row = 0; $row < count($entries); $row++){
 					echo "<section id='post'>";
 					echo "<p><span id='username'>".$entries[$row][1]."</span>  ";
-					echo "  <span id='time'>(".$entries[$row][0].")</span></p>";
+					echo "  <span id='time'>(".$entries[$row][0].")</span></p><br/>";
 					echo "<p id='contents'>".$entries[$row][2]."</p>";
 					echo "</section>";
 					echo "<br/>";
