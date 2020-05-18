@@ -33,7 +33,7 @@
         <link rel="stylesheet" type="text/css" href="webroot/css/style.css">
     </head>
     <body>
-		<article>
+		<article id='blog'>
 			<?php
 				for ($row = 0; $row < count($entries); $row++){
 					echo "<section id='post'>";
