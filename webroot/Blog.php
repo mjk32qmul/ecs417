@@ -18,7 +18,11 @@
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			$tmp = array("".$result["time"]."", "".$result["username"]."", "".$result["contents"]."");
+			$time = $result["time"];
+			$username = $result["username"];
+			$contents = $result["contents"];
+			echo $time. ":".$username.":".$contents;
+			$tmp = array();
 			array_push($entries, $tmp);
 		}
 	}
