@@ -17,10 +17,7 @@
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			$username = $row["username"];
-			$contents = $row["contents"];
-			$date = date("Y/m/d h:i:sa", $row["time"]);
-			$tmp = array($date, $username, $contents);
+			$tmp = array($row["time"], $row["username"], $row["contents"]);
 			array_push($entries, $tmp);
 		}
 	}
