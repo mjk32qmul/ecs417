@@ -14,6 +14,9 @@
                     <li href="#home">Experience</li>
                     <li href="#education">Education</li>
                     <li href="#skills">Skills</li>
+					<li href="Login.php">Login</li>
+					<li href="addpost.php">Add Post</li>
+					<li href="Blog.php">Blog</li>
                 </ul>
             </nav>
         </div>
