@@ -32,6 +32,22 @@
         <link rel="stylesheet" type="text/css" href="webroot/css/style.css">
     </head>
     <body>
+		<div class="nav">
+            <nav>
+                <ul>
+					<li><a href="Portfolio.php">Home</a></li>
+					<?php
+						if ($_SESSION["loggedIn"]){
+							echo "<li><a href='addpost.php'>Add Post</a></li>";
+						}
+						else{
+							echo "<li><a href='Login.html'>Login</a></li>";
+						}
+					?>
+					<li><a href="Blog.php">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
 		<article id='blog'>
 			<?php
 				if (count($entries) < 1){

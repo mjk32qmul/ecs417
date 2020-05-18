@@ -13,9 +13,17 @@
         <link rel="stylesheet" type="text/css" href="weebroot/css/style.css">
     </head>
     <body>
-            <form action="submitPost.php" method="post">
-                <textarea name="message" rows="15" cols="100"></textarea><br>
-                <input type="submit">
-            </form>
+		<div class="nav">
+            <nav>
+                <ul>
+					<li><a href="Portfolio.php">Home</a></li>
+					<li><a href="Blog.php">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+		<form action="submitPost.php" method="post">
+			<textarea name="message" rows="15" cols="100"></textarea><br>
+			<input type="submit">
+		</form>
     </body>
 </html>
