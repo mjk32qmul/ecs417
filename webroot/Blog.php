@@ -12,7 +12,6 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 	$sqlQuery = "SELECT * FROM POSTS ORDER BY ID DESC";
-	echo $sqlQuery;
 	$result = $conn->query($sqlQuery);
 	$entries = array();
 
