@@ -58,6 +58,7 @@ form{
 	padding: 1%;
 	position: absolute;
 	max-width: 70%;
+	min-width: 70%;
 	left: 15%;
 }
 
@@ -77,6 +78,7 @@ form{
 
 #contents{
 	max-width: 80%;
+	min-width: 80%;
 	left: 10%;
 	position: absolute;
 	color: black;
