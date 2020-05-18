@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!Doctype html>
 <html>
 <head>
@@ -14,8 +17,14 @@
 					<li><a href="#home">Experience</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
-					<li><a href="Login.php">Login</a></li>
-					<li><a href="addpost.php">Add Post</a></li>
+					<?php
+						if ($_SESSION["loggedIn"]){
+							echo "<li><a href='addpost.php'>Add Post</a></li>";
+						}
+						else{
+							echo "<li><a href='Login.html'>Login</a></li>";
+						}
+					?>
 					<li><a href="Blog.php">Blog</a></li>
                 </ul>
             </nav>
