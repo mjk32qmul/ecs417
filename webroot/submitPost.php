@@ -6,6 +6,7 @@
 	else{
 		$postContents = $_POST["message"];
 		echo "You sent message: ".$postContents;
+		echo $_POST["message"];
 		$sqlQuery = "INSERT INTO POSTS (username,  contents) VALUES('".$_SESSION["username"]."','".$postContents."')";
 		$dbhost = getenv("MYSQL_SERVICE_HOST");
 		//$dbport = getenv("MYSQL_SERVICE_PORT");
