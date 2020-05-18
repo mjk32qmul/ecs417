@@ -84,3 +84,95 @@ form{
 	padding: 1%;
 	white-space: pre-wrap;
 }
+
+
+
+body {
+    font: 100% "Lato", sans-serif;
+}
+
+
+li {
+    display: block;
+    padding: 2%;
+}
+
+.nav {
+    overflow: hidden;
+    width: 100%;
+    background-color: lightgreen;
+}
+
+    .nav li, h1 {
+        float: left;
+        padding: 2%;
+        text-align: center;
+        color: black;
+        
+    }
+
+    .nav h1 {
+        font: 200% "Lato", sans-serif;
+    }
+
+.about, .education {
+    position: absolute;
+    left: 25%;
+    max-width: 90%;
+    max-height: 50%;
+    padding: 1.5%;
+    width: 50%;
+}
+
+.about img{
+    float: right;
+    max-width: 50%;
+}
+
+.education {
+    top: 45%;
+}
+
+aside {
+    max-width: 25%;
+    position: absolute;
+    width: 15em;
+}
+
+    aside#left {
+        left: 0%;
+    }
+
+    aside#right {
+        right: 0%;
+    }
+
+
+.reaserch, .skills, .links, .hobbies, .movies {
+    padding: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: whitesmoke;
+}
+
+.reaserch {
+    color: darksalmon;
+    background-color: antiquewhite;
+}
+
+.links {
+    color: darkmagenta;
+}
+
+.skills h2, .hobbies h2, .movies h2 {
+    background-color: lightgreen;
+    padding: 2%;
+}
+
+.skills li, .hobbies li, .movies li {
+    background-color: white;
+}
+
+.skills img {
+    float: left;
+}
