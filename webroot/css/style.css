@@ -60,10 +60,11 @@ form{
 	max-width: 70%;
 	min-width: 70%;
 	left: 15%;
+	background-color: #d8e6e6;
 }
 
 #post{
-	background-color: #d8e6e6;
+	background-color: #f0f2f2;
 	color: #2a2b2b;
 	padding: 2%;
 }
@@ -80,5 +81,4 @@ form{
 	max-width: 98%;
 	min-width: 98%;
 	padding: 1%;
-	background-color: #f0f2f2;
 }
