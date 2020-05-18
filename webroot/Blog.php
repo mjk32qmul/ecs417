@@ -17,11 +17,9 @@
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			$time = $row["time"];
 			$username = $row["username"];
 			$contents = $row["contents"];
-			$date = date("Y/m/d h:i:sa", $time);
-			echo $time. ":".$username.":".$contents.":".$date;
+			$date = date("Y/m/d h:i:sa", $row["time"]);
 			$tmp = array($date, $username, $contents);
 			array_push($entries, $tmp);
 		}
@@ -43,7 +41,7 @@
 				for ($row = 0; $row < count($entries); $row++){
 					echo "<section id='post'>";
 					echo "<p id='username'>".$entries[$row][1]."</p>";
-					echo "<p id='time'>".$entries[$row][0]."</p>";
+					echo "<p id='time'>(".$entries[$row][0].")</p>";
 					echo "<br/>";
 					echo "<p id='contents'>".$entries[$row][2]."</p>";
 					echo "</section>";
