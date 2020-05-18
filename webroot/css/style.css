@@ -54,9 +54,29 @@ form{
 	background-color: white;
 }
 
-#post{
+#blog{
 	padding: 1%;
 	position: absolute;
-	max-width: 50%;
-	left: 25%;
+	max-width: 70%;
+	left: 15%;
+}
+
+#post{
+	background-color: black;
+	color: white;
+}
+
+#username{
+	font-weight: bold;
+}
+
+#time{
+	font-weight: lighter;
+}
+
+#contents{
+	max-width: 80%;
+	left: 10%;
+	color: black;
+	background-color: white;
 }
