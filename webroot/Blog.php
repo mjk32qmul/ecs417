@@ -34,7 +34,7 @@
     <body>
 		<article id='blog'>
 			<?php
-				if (count($entries) > 0){
+				if (count($entries) < 1){
 					echo "<section id='post'>";
 					echo "<p id='contents'>Sorry but there are no posts at the moment. Please check back again later</p>";
 					echo "</section>";
