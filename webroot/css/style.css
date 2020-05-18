@@ -64,6 +64,7 @@ form{
 #post{
 	background-color: black;
 	color: white;
+	padding: 2%;
 }
 
 #username{
@@ -77,6 +78,7 @@ form{
 #contents{
 	max-width: 80%;
 	left: 10%;
+	position: absolute;
 	color: black;
 	background-color: white;
 }
