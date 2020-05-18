@@ -23,8 +23,8 @@
 			$contents = $result["contents"];
 			$date = date("Y/m/d h:i:sa", $time);
 			echo $time. ":".$username.":".$contents.":".$date;
-			$tmp = array();
-			array_push($entries, $tmp);
+			//$tmp = array();
+			//array_push($entries, $tmp);
 		}
 	}
 	$conn->close();
@@ -41,14 +41,14 @@
     <body>
 		<article>
 			<?php
-				for ($row = 0; $row < count($entries); $row++){
+				/*for ($row = 0; $row < count($entries); $row++){
 					echo "<section id='post'>";
 					echo "<p id='username'>".$entries[$row][1]."</p>";
 					echo "<p id='time'>".$entries[$row][0]."</p>";
 					echo "<br/>";
 					echo "<p id='contents'>".$entries[$row][2]."</p>";
 					echo "</section>";
-				}
+				}*/
 			?>
 		</article>
     </body>
