@@ -22,7 +22,6 @@ input[type=submit], input[type=button] {
 	border: none;
 	cursor: pointer;
 	width: 50%;
-	display: block;
 }
 
 #addPost input[type=submit], input[type=button] {
