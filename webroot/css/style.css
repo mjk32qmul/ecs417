@@ -51,8 +51,6 @@ header{
 form{
 	padding-top: 1%;
 	padding-bottom: 1%;
-	text-align: center;
-	background-color: white;
 }
 
 #blog{
@@ -89,7 +87,7 @@ form{
 	white-space: pre-wrap;
 }
 
-#commentSection, #commentTitle{
+#commentSection, #commentTitle, makeComment{
 	background-color: #2a2b2b;
 	color: #f7f7f7;
 	border-left: 0.5em solid #242424!important;
