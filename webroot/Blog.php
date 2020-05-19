@@ -59,7 +59,8 @@
 					echo "<div id='addPost'>";
 					echo "<form action='submitPost.php' method='post'>
 						  <p>Add Post</p>
-						  Title:<input type='text' id='addPostTitle' name='title'>
+						  <label for'addPostTitle'>Title:</label>
+						  <input type='text' id='addPostTitle' name='title'>
 						  <textarea id='message' name='message' rows='15' cols='10000'></textarea><br/>
 						  <div id='postButtons'>
 						  <input type='submit'>
