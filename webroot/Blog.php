@@ -75,7 +75,7 @@
 					for ($row = 0; $row < count($entries); $row++){
 						echo "<section id='post'><p><span id='username'>".$entries[$row][1]."</span>    <span id='time'>(".$entries[$row][0].")</span></p><br/><p id='contents'>".$entries[$row][2]."</p></section><br/>
 						<form action='submitComment.php' method='post'>
-							<input type='hidden'>".$entries[$row][3]."
+							<input name='postID' type='hidden' value='".$entries[$row][3]."'>
 							<textarea name='message' rows='5' cols='100'></textarea><br>
 							<input type='submit'>
 						</form>";
