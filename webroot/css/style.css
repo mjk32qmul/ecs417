@@ -23,7 +23,7 @@ input[type=submit], input[type=button] {
 	cursor: pointer;
 }
 
-#addPost input[type=submit], input[type=button] {
+#postButtons {
 	display: flex;
   	flex-flow: row wrap;
   	align-items: center;
