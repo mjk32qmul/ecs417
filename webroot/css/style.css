@@ -28,7 +28,6 @@ button:hover {
   	opacity: 0.8;
 }
 
-
 .container {
   	padding: 16px;
 	background-color: black;
@@ -44,9 +43,9 @@ header{
 	padding: 1%;
 }
 
-form{
-	padding-top: 1%;
-	padding-bottom: 1%;
+#makeComment{
+	background-color: #2a2b2b;
+	color: #f7f7f7;
 }
 
 #message{
