@@ -36,6 +36,11 @@ input[type=submit], input[type=button] {
 }
 
 #makeComment{
+	color: #f7f7f7;
+	background-color: #2a2b2b;
+}
+
+#makeComment input[type=submit]{
 	color: #2a2b2b;
 	background-color: #f7f7f7;
 }
