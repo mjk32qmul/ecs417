@@ -14,7 +14,7 @@ input[type=text], input[type=password] {
 	box-sizing: border-box;
 }
 
-input[type=submit], input[type=button] {
+input[type=submit], input[type=button], #register {
 	background-color: #2a2b2b;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -37,7 +37,7 @@ input[type=submit], input[type=button] {
 .container {
   	padding: 16px;
 	background-color: #f7f7f7;
-	color: #f7f7f7;
+	color: #2a2b2b;
 	max-width: 30%;
 	position: absolute;
 	top: 25%;
