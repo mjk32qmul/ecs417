@@ -17,7 +17,7 @@
 	$lastname = $_POST["lastname"];
 	$email = $_POST["email"];
 	
-	$sql = "INSERT INTO USERS (username, firstname, lastname, password, email) VALUES ('".$username."','".$firstname."','".$lastname."','".$password."','".$email."')";
+	$sql = "INSERT INTO USERS (username, firstname, lastname, password, email, admin) VALUES ('".$username."','".$firstname."','".$lastname."','".$password."','".$email."', 0)";
 	$result = $conn->query($sql);
 	if ($conn->query($sqlQuery) === TRUE){
 		echo "New user created";
