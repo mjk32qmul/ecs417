@@ -17,19 +17,10 @@
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			$comments = array();
-			$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$row["ID"];
-			$resultComments = $conn->query($sqlQueryComments);
-			if ($resultComments->num_rows > 0){
-				while($column = $resultComments->fetch_assoc()){
-					array_push($comments, $column["time"], $column["username"], $row["contents"], $row["postID"], $row["commentID"]);
-				}
-			}
-			$tmp = array($row["time"], $row["username"], $row["contents"], $row["ID"], $comments);
+			$tmp = array($row["time"], $row["username"], $row["contents"], $row["ID"]);
 			array_push($entries, $tmp);
 		}
 	}
-	$conn->close();
 ?>
 
 <!Doctype html>
@@ -86,13 +77,19 @@
 						<br/>
 						<p id='contents'>".$entries[$row][2]."</p>
 						</section>
-						<br/>
-						<section id='comment'>
-						<p><span id='username'>".$entries[$row][4][1]."</span>    <span id='time'>(".$entries[$row][4][0].")</span></p>
-						<br/>
-						<p id='contents'>".$entries[$row][4][2]."</p>
-						</section>
 						<br/>";
+						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3];
+						$resultComments = $conn->query($sqlQueryComments);
+						if ($resultComments->num_rows > 0){
+							while($column = $resultComments->fetch_assoc()){
+								echo "<section id='comment'>
+								<p><span id='username'>".$column["username"]."</span>    <span id='time'>(".$column["time"].")</span></p>
+								<br/>
+								<p id='contents'>".$column["contents"]."</p>
+								</section>
+								<br/>";
+							}
+						}
 						if ($_SESSION["loggedIn"]){
 						echo "<form action='submitComment.php' method='post'>
 							<input name='postID' type='hidden' value='".$entries[$row][3]."'>
@@ -106,3 +103,5 @@
 		</article>
     </body>
 </html>
+<?php
+	$conn->close();
