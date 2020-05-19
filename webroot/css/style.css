@@ -93,6 +93,9 @@ header{
 
 #commentSection{
 	padding: 2%;
+}
+
+#comment{
 	border-left: 0.5em solid #242424!important;
 }
 
