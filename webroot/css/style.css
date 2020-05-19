@@ -40,6 +40,7 @@ input[type=submit], input[type=button] {
 	background-color: #f7f7f7;
 	color: #2a2b2b;
 	max-width: 30%;
+	min-width: 30%;
 	position: absolute;
 	top: 25%;
 	left: 35%;
