@@ -95,7 +95,7 @@
 						if ($_SESSION["loggedIn"]){
 							echo "<form action='submitComment.php' method='post' id='makeComment'>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
-								<textarea name='message' rows='5' cols='100'></textarea><br>
+								<textarea name='message' rows='5' cols='100' id='commentTextArea'></textarea><br>
 								<input type='submit'>
 							</form><br/>";
 						}
