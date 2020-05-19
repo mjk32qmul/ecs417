@@ -43,13 +43,8 @@ header{
 	padding: 1%;
 }
 
-#makeComment form{
-	background-color: #2a2b2b;
-	color: #f7f7f7;
-}
-
 #message{
-	max-width: 80%;
+	max-width: 100%;
 }
 
 #blog{
