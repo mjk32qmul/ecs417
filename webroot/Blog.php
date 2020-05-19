@@ -79,8 +79,12 @@
 						<h2 id='postTitle'>".$entries[$row][4]."</h2>
 						<p><span id='username'>".$entries[$row][1]."</span>    <span id='time'>(".$entries[$row][0].")</span></p>
 						<br/>
-						<p id='contents'>".$entries[$row][2]."</p>
-						</section>";
+						<p id='contents'>".$entries[$row][2]."</p>";
+						if ($_SESSION["admin"] == 1){
+							echo "<input name='postID' type='hidden' value='".$entries[$row][3]."'>
+							<input name='deleteButton' type='button' value='delete'>";
+						}
+						echo "</section>";
 						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3]." ORDER BY commentID DESC";
 						$resultComments = $conn->query($sqlQueryComments);
 						
@@ -91,9 +95,12 @@
 								echo "<section id='comment'>
 								<p><span id='username'>".$column["username"]."</span>    <span id='time'>(".$column["time"].")</span></p>
 								<br/>
-								<p id='contents'>".$column["contents"]."</p>
-								<br/>
-								</section>";
+								<p id='contents'>".$column["contents"]."</p>";
+								if ($_SESSION["admin"] == 1){
+									echo "<input name='postID' type='hidden' value='".$entries[$row][3]."'>
+									<input name='deleteButton' type='button' value='delete'>";
+								}
+								echo "<br/></section>";
 							}
 						}
 						if ($_SESSION["loggedIn"]){
