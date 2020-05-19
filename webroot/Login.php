@@ -39,7 +39,8 @@
 				$_SESSION["password"] = $row["password"];
 				$_SESSION["loggedIn"] = true;
 				$_SESSION["admin"] = $row["admin"];
-				header("Location: Blog.php");
+				echo $_SESSION["admin"];
+				//header("Location: Blog.php");
 			}
 		}
 		$conn->close();
