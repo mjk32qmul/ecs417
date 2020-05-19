@@ -76,8 +76,7 @@
 						<p><span id='username'>".$entries[$row][1]."</span>    <span id='time'>(".$entries[$row][0].")</span></p>
 						<br/>
 						<p id='contents'>".$entries[$row][2]."</p>
-						</section>
-						<br/>";
+						</section>";
 						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3]." ORDER BY commentID DESC";
 						$resultComments = $conn->query($sqlQueryComments);
 						
@@ -93,13 +92,13 @@
 								<br/>";
 							}
 						}
-						echo "</article>";
+						echo "</article><br/>";
 						if ($_SESSION["loggedIn"]){
 							echo "<form action='submitComment.php' method='post'>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
 								<textarea name='message' rows='5' cols='100'></textarea><br>
 								<input type='submit'>
-							</form>";
+							</form><br/>";
 						}
 						
 					}
