@@ -63,8 +63,8 @@ header{
 }
 
 #commentTextArea{
-	max-width: 80%;
-	min-width: 80%;
+	max-width: 100%;
+	min-width: 100%;
 }
 
 #username, #commentTitle{
@@ -89,11 +89,11 @@ header{
 #commentSection, #commentTitle, makeComment{
 	background-color: #2a2b2b;
 	color: #f7f7f7;
-	border-left: 0.5em solid #242424!important;
 }
 
 #commentSection{
 	padding: 2%;
+	border-left: 0.5em solid #242424!important;
 }
 
 
