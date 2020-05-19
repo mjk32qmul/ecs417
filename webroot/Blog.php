@@ -58,7 +58,7 @@
 			if($_SESSION["loggedIn"]){
 				echo "<div id='addPost'>";
 				echo "<form action='submitPost.php' method='post'>
-					  <textarea id='message' name='message' rows='15' cols='100'></textarea><br>
+					  <textarea id='message' name='message' rows='15' cols='100'></textarea><br/>
 					  <input type='submit'>
 					  </form>
 					  <input type='button' id='clearButton' onclick='javascript: removeText();'></button>";

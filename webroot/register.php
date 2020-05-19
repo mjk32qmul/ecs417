@@ -23,7 +23,7 @@
 		echo "New user created";
 	}
 	else{
-		echo "Error: ".$sqlQuery. "<br>" .$conn->error;
+		echo "Error: ".$sqlQuery. "<br/>" .$conn->error;
 	}
 	header("Location: Portfolio.php");
 	
