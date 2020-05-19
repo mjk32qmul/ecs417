@@ -14,13 +14,14 @@ input[type=text], input[type=password] {
 	box-sizing: border-box;
 }
 
-input[type=submit], input[type=button], #register {
+input[type=submit], input[type=button] {
 	background-color: #2a2b2b;
 	padding: 14px 20px;
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
 	color: #f7f7f7;
 }
 
@@ -42,6 +43,7 @@ input[type=submit], input[type=button], #register {
 	position: absolute;
 	top: 25%;
 	left: 35%;
+	text-decoration: none;
 }
 
 #message{
