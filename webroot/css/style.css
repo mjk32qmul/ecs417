@@ -90,8 +90,8 @@ form{
 }
 
 #commentSection, #commentTitle{
-	background-color: #f7f7f7;
-	color: #2a2b2b;
+	background-color: #2a2b2b;
+	color: #f7f7f7;
 	border-left: 0.5em solid #242424!important;
 }
 
