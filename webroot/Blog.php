@@ -99,7 +99,7 @@
 								<input type='submit'>
 							</form><br/>";
 						}
-						echo "</article>";
+						echo "</article><br/>";
 						
 					}
 				}
