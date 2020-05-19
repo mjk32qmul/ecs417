@@ -109,7 +109,7 @@ li {
 	text-align: center;
 }
 
-.nav li:active, li:visited, li:link{
+.nav a:active, a:visited, a:link{
 	color: #f1f1f1;
 }
 
