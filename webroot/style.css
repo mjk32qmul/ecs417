@@ -1,0 +1,192 @@
+/* CSS Document */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #242424;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+input[type=submit], input[type=button] {
+	background-color: #2a2b2b;
+	color: #f7f7f7;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+#postButtons {
+	display: flex;
+  	flex-flow: row wrap;
+  	align-items: center;
+}
+
+#postButtons input[type=submit], input[type=button] {
+	width: 50%;
+}
+
+.container {
+  	padding: 16px;
+	background-color: #f7f7f7;
+	max-width: 30%;
+	position: absolute;
+	top: 25%;
+	left: 35%;
+}
+
+#message{
+	max-width: 100%;
+	min-width: 100%;
+}
+
+#blog{
+	padding: 1%;
+	position: absolute;
+	max-width: 70%;
+	min-width: 70%;
+	left: 15%;
+	background-color: #dbdbdb;
+}
+
+#post{
+	background-color: #f7f7f7;
+	color: #2a2b2b;
+	padding: 2%;
+}
+
+#commentTextArea{
+	max-width: 100%;
+	min-width: 100%;
+}
+
+#username, #commentTitle{
+	font-weight: bold;
+}
+
+#commentTitle{
+	padding: 1%;
+}
+
+#time{
+	font-weight: lighter;
+}
+
+#contents{
+	max-width: 98%;
+	min-width: 98%;
+	padding: 1%;
+	white-space: pre-wrap;
+}
+
+#commentSection, #commentTitle, makeComment{
+	background-color: #2a2b2b;
+	color: #f7f7f7;
+}
+
+#commentSection{
+	padding: 1%;
+}
+
+#comment{
+	border-left: 0.5em solid #242424!important;
+	padding: 1%
+}
+
+/*the nav menu*/
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #242424;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: #f7f7f7;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  background-color: #141414;
+}
+
+
+
+
+
+.about, .education {
+    position: absolute;
+    left: 25%;
+    max-width: 90%;
+    max-height: 50%;
+    padding: 1.5%;
+    width: 50%;
+}
+
+.about img{
+    float: right;
+    max-width: 50%;
+}
+
+.education {
+    top: 45%;
+}
+
+aside {
+    max-width: 25%;
+    position: absolute;
+    width: 15em;
+}
+
+    aside#left {
+        left: 0%;
+    }
+
+    aside#right {
+        right: 0%;
+    }
+
+.reaserch, .skills, .links, .hobbies, .movies {
+    padding: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: whitesmoke;
+}
+
+.reaserch {
+    color: darksalmon;
+    background-color: antiquewhite;
+}
+
+.links {
+    color: darkmagenta;
+}
+
+.skills h2, .hobbies h2, .movies h2 {
+    background-color: lightgreen;
+    padding: 2%;
+}
+
+.skills li, .hobbies li, .movies li {
+    background-color: white;
+}
+
+.skills img {
+    float: left;
+}
