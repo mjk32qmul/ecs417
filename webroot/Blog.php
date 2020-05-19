@@ -58,9 +58,8 @@
 				if($_SESSION["loggedIn"] && $_SESSION["admin"] == 1){
 					echo "<div id='addPost'>";
 					echo "<form action='submitPost.php' method='post'>
-						  <p>Add Post</p>
-						  <label for'addPostTitle'>Title:</label>
-						  <input type='text' id='addPostTitle' name='title'>
+						  <h2>Add Post</h2>
+						  <label for'addPostTitle'>Title:</label><input type='text' id='addPostTitle' name='title'>
 						  <textarea id='message' name='message' rows='15' cols='10000'></textarea><br/>
 						  <div id='postButtons'>
 						  <input type='submit'>
@@ -97,7 +96,7 @@
 							}
 						}
 						if ($_SESSION["loggedIn"]){
-							echo "<form action='submitComment.php' method='post' id='makeComment'>
+							echo "<form action='submitComment.php' method='post' id='makeComment'><label for'message'>Add Comment</label>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
 								<textarea name='message' rows='5' cols='1000' id='commentTextArea'></textarea><br>
 								<input type='submit'>
