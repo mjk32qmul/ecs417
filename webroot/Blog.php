@@ -78,7 +78,7 @@
 						<p id='contents'>".$entries[$row][2]."</p>
 						</section>
 						<br/>";
-						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3]."ORDER BY commentID DESC";
+						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3]." ORDER BY commentID DESC";
 						$resultComments = $conn->query($sqlQueryComments);
 						if ($resultComments->num_rows > 0){
 							while($column = $resultComments->fetch_assoc()){
