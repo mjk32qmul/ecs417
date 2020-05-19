@@ -88,12 +88,8 @@ form{
 #commentSection{
 	background-color: #f7f7f7;
 	color: #2a2b2b;
-	padding: 2%;
-}
-
-#comment{
-	padding: 2%;
-	border-left: 0.5% solid #242424!important;
+	padding: 3%;
+	border-left: 0.5em solid #242424!important;
 }
 
 
