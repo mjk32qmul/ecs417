@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$dbhost = getenv("MYSQL_SERVICE_HOST");
 	//$dbport = getenv("MYSQL_SERVICE_PORT");
 	$dbuser = getenv("DATABASE_USER");
@@ -32,15 +33,54 @@
         <link rel="stylesheet" type="text/css" href="webroot/css/style.css">
     </head>
     <body>
+		<div class="nav">
+            <nav>
+                <ul>
+					<li><a href="Portfolio.php">Home</a></li>
+					<?php
+						if ($_SESSION["loggedIn"]){
+							echo "<li><a href='addpost.php'>Add Post</a></li>";
+						}
+						else{
+							echo "<li><a href='Login.html'>Login</a></li>";
+						}
+					?>
+					<li><a href="Blog.php">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+		<script>
+			function removeText(){
+				document.getElementById("message").value = "";
+			}
+		</script>
+		<?php
+			if($_SESSION["loggedIn"]){
+				echo "<div id='addPost'>";
+				echo "<form action='submitPost.php' method='post'>
+					  <textarea id='message' name='message' rows='15' cols='100'></textarea><br/>
+					  <input type='submit'>
+					  </form>
+					  <input type='button' id='clearButton' onclick='javascript: removeText();'></button>";
+				echo "</div>";
+			}
+		?>
 		<article id='blog'>
 			<?php
-				for ($row = 0; $row < count($entries); $row++){
+				if (count($entries) < 1){
 					echo "<section id='post'>";
-					echo "<p><span id='username'>".$entries[$row][1]."</span>  ";
-					echo "  <span id='time'>(".$entries[$row][0].")</span></p><br/>";
-					echo "<p id='contents'>".$entries[$row][2]."</p>";
+					echo "<p id='contents'>Sorry but there are no posts at the moment. Please check back again later</p>";
 					echo "</section>";
-					echo "<br/>";
+				}
+				else{
+					for ($row = 0; $row < count($entries); $row++){
+						echo "<section id='post'>";
+						echo "<p><span id='username'>".$entries[$row][1]."</span>  ";
+						echo "  <span id='time'>(".$entries[$row][0].")</span></p><br/>";
+						echo "<p id='contents'>".$entries[$row][2]."</p>";
+						echo "</section>";
+						echo "<br/>";
+					}
 				}
 			?>
 		</article>

@@ -1,12 +1,6 @@
-<?php
-    session_start();
- 	if (!$_SESSION["loggedIn"]){
-		header("Location: Login.php");
-	}
-?>
-<!Doctype html>
+<!doctype html>
 <html>
-    <head>
+	<head>
         <meta charset="UTF-8" />
         <title>My Site</title>
         <link rel="stylesheet" type="text/css" href="webroot/css/reset.css">
@@ -21,8 +15,12 @@
                 </ul>
             </nav>
         </div>
-		<form action="submitPost.php" method="post">
-			<textarea name="message" rows="15" cols="100"></textarea><br>
+		<form action="register.php" method="post">
+			<input type="text" name="firstname"><br/>
+			<input type="text" name="lastname"><br/>
+			<input type="text" name="username"><br/>
+			<input type="text" name="password"><br/>
+			<input type="text" name="email"><br/>
 			<input type="submit">
 		</form>
     </body>
