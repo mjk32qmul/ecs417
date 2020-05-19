@@ -60,8 +60,10 @@
 					echo "<form action='submitPost.php' method='post'>
 						  <p>Add Post</p>
 						  <textarea id='message' name='message' rows='15' cols='10000'></textarea><br/>
+						  <div id='postButtons'>
 						  <input type='submit'>
 						  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>
+						  </div>
 						  </form>";
 					echo "</div>";
 				}
