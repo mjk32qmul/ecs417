@@ -58,10 +58,10 @@
 				if($_SESSION["loggedIn"] && $_SESSION["admin"] == 1){
 					echo "<div id='addPost'>";
 					echo "<form action='submitPost.php' method='post'>
-						  <textarea id='message' name='message' rows='15' cols='100'></textarea><br/>
+						  <textarea id='message' name='message' rows='15' cols='10000'></textarea><br/>
 						  <input type='submit'>
-						  </form>
-						  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>";
+						  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>
+						  </form>";
 					echo "</div>";
 				}
 				if (count($entries) < 1){
