@@ -17,7 +17,7 @@
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			$tmp = array($row["time"], $row["username"], $row["contents"]);
+			$tmp = array($row["time"], $row["username"], $row["contents"], $row["ID"]);
 			array_push($entries, $tmp);
 		}
 	}
@@ -55,7 +55,7 @@
 			}
 		</script>
 		<?php
-			if($_SESSION["loggedIn"] && $_SESSION["admin"] === 1){
+			if($_SESSION["loggedIn"] && $_SESSION["admin"] == 1){
 				echo "<div id='addPost'>";
 				echo "<form action='submitPost.php' method='post'>
 					  <textarea id='message' name='message' rows='15' cols='100'></textarea><br/>
@@ -68,18 +68,17 @@
 		<article id='blog'>
 			<?php
 				if (count($entries) < 1){
-					echo "<section id='post'>";
-					echo "<p id='contents'>Sorry but there are no posts at the moment. Please check back again later</p>";
-					echo "</section>";
+					echo "<section id='post'><p id='contents'>Sorry but there are no posts at the moment. Please check back again later</p>
+					</section>";
 				}
 				else{
 					for ($row = 0; $row < count($entries); $row++){
-						echo "<section id='post'>";
-						echo "<p><span id='username'>".$entries[$row][1]."</span>  ";
-						echo "  <span id='time'>(".$entries[$row][0].")</span></p><br/>";
-						echo "<p id='contents'>".$entries[$row][2]."</p>";
-						echo "</section>";
-						echo "<br/>";
+						echo "<section id='post'><p><span id='username'>".$entries[$row][1]."</span>    <span id='time'>(".$entries[$row][0].")</span></p><br/><p id='contents'>".$entries[$row][2]."</p></section><br/>
+						<form action='submitComment.php' method='post'>
+							<input type='hidden'>".$entries[$row][3]."
+							<textarea name='message' rows='5' cols='100'></textarea><br>
+							<input type='submit'>
+						</form>";
 					}
 				}
 			?>
