@@ -14,7 +14,7 @@ input[type=text], input[type=password] {
 	box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit], input[type=button] {
 	background-color: black;
 	color: white;
 	padding: 14px 20px;
@@ -22,6 +22,7 @@ input[type=submit] {
 	border: none;
 	cursor: pointer;
 	width: 100%;
+	display: block;
 }
 
 .container {
@@ -35,6 +36,7 @@ input[type=submit] {
 
 #message{
 	max-width: 100%;
+	min-width: 100%;
 }
 
 #blog{
