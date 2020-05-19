@@ -88,16 +88,18 @@
 						</section>
 						<br/>
 						<section id='comment'>
-						<p><span id='username'>".$entries[$row][3][1]."</span>    <span id='time'>(".$entries[$row][3][0].")</span></p>
+						<p><span id='username'>".$entries[$row][4][1]."</span>    <span id='time'>(".$entries[$row][4][0].")</span></p>
 						<br/>
-						<p id='contents'>".$entries[$row][3][2]."</p>
+						<p id='contents'>".$entries[$row][4][2]."</p>
 						</section>
-						<br/>
-						<form action='submitComment.php' method='post'>
+						<br/>";
+						if ($_SESSION["loggedIn"]){
+						echo "<form action='submitComment.php' method='post'>
 							<input name='postID' type='hidden' value='".$entries[$row][3]."'>
 							<textarea name='message' rows='5' cols='100'></textarea><br>
 							<input type='submit'>
 						</form>";
+						}
 					}
 				}
 			?>
