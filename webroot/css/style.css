@@ -92,11 +92,12 @@ header{
 }
 
 #commentSection{
-	padding: 2%;
+	padding: 1%;
 }
 
 #comment{
 	border-left: 0.5em solid #242424!important;
+	padding: 1%
 }
 
 
