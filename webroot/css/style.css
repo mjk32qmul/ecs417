@@ -5,10 +5,6 @@ body {
 	background-color: #242424;
 }
 
-form {
-	border: 0.5% solid #f1f1f1;
-}
-
 input[type=text], input[type=password] {
 	width: 100%;
 	padding: 12px 20px;
@@ -51,6 +47,10 @@ header{
 form{
 	padding-top: 1%;
 	padding-bottom: 1%;
+}
+
+#message{
+	max-width: 80%;
 }
 
 #blog{
