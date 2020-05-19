@@ -39,7 +39,7 @@
 				$_SESSION["password"] = $row["password"];
 				$_SESSION["loggedIn"] = true;
 				$_SESSION["admin"] = $row["admin"];
-				echo $_SESSION["admin"];
+				echo $row["admin"];
 				//header("Location: Blog.php");
 			}
 		}
