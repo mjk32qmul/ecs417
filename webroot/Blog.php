@@ -80,23 +80,27 @@
 						<br/>";
 						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3]." ORDER BY commentID DESC";
 						$resultComments = $conn->query($sqlQueryComments);
+						
+						echo "<article id='commentSection'>";
+						
 						if ($resultComments->num_rows > 0){
 							while($column = $resultComments->fetch_assoc()){
 								echo "<section id='comment'>
 								<p><span id='username'>".$column["username"]."</span>    <span id='time'>(".$column["time"].")</span></p>
 								<br/>
-								<p id='contents'>".$column["contents"]."</p>
-								</section>
-								<br/>";
+								<p id='contents'>".$column["contents"]."</p>";
 							}
 						}
 						if ($_SESSION["loggedIn"]){
-						echo "<form action='submitComment.php' method='post'>
-							<input name='postID' type='hidden' value='".$entries[$row][3]."'>
-							<textarea name='message' rows='5' cols='100'></textarea><br>
-							<input type='submit'>
-						</form>";
+							echo "<form action='submitComment.php' method='post'>
+								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
+								<textarea name='message' rows='5' cols='100'></textarea><br>
+								<input type='submit'>
+							</form>
+							</section>
+							<br/>";
 						}
+						echo "</article>";
 					}
 				}
 			?>

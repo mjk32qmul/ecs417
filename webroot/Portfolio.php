@@ -12,7 +12,6 @@
     <body>
         <div class="nav">
             <nav>
-                <h1 class="home">Matthew King</h1>
                 <ul>
 					<li><a href="#home">Experience</a></li>
                     <li><a href="#education">Education</a></li>
