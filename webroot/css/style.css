@@ -103,17 +103,21 @@ li {
     background-color: #1c1c1c;
 }
 
-    .nav li, h1 {
-        float: left;
-        padding: 2%;
-        text-align: center;
-        color: #f1f1f1;
-        
-    }
+.nav li, h1 {
+	float: left;
+	padding: 2%;
+	text-align: center;
+	color: #f1f1f1;
 
-    .nav h1 {
-        font: 200% "Lato", sans-serif;
-    }
+}
+
+.nav li:active, li:visited, li:link{
+	color: #f1f1f1;
+}
+
+.nav h1 {
+	font: 200% "Lato", sans-serif;
+}
 
 .about, .education {
     position: absolute;
