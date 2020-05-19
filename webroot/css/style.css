@@ -85,9 +85,13 @@ form{
 	white-space: pre-wrap;
 }
 
-#comment{
+#commentSection{
 	background-color: #f7f7f7;
 	color: #2a2b2b;
+	padding: 2%;
+}
+
+#comment{
 	padding: 2%;
 }
 
