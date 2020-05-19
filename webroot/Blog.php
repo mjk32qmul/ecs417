@@ -17,7 +17,7 @@
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			$tmp = array($row["time"], $row["username"], $row["contents"], $row["ID"]);
+			$tmp = array($row["time"], $row["username"], $row["contents"], $row["ID"], $row["title"]);
 			array_push($entries, $tmp);
 		}
 	}
@@ -74,6 +74,7 @@
 				else{
 					for ($row = 0; $row < count($entries); $row++){
 						echo "<section id='post'>
+						<h2 id='postTitle'>".$entries[$row][4]."</h2>
 						<p><span id='username'>".$entries[$row][1]."</span>    <span id='time'>(".$entries[$row][0].")</span></p>
 						<br/>
 						<p id='contents'>".$entries[$row][2]."</p>
