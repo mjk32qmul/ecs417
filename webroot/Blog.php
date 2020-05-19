@@ -49,6 +49,22 @@
                 </ul>
             </nav>
         </div>
+		<script>
+			function removeText(){
+				document.getElementById("message").value = "";
+			}
+		</script>
+		<?php
+			if($_SESSION["loggedIn"]){
+				echo "<div id='addPost'>";
+				echo "<form action='submitPost.php' method='post'>
+					  <textarea id='message' name='message' rows='15' cols='100'></textarea><br>
+					  <input type='submit'>
+					  </form>
+					  <input type='button' id='clearButton' onclick='javascript: removeText();'></button>";
+				echo "</div>";
+			}
+		?>
 		<article id='blog'>
 			<?php
 				if (count($entries) < 1){

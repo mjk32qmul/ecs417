@@ -26,6 +26,7 @@
 		else{
 			echo "Error: ".$sqlQuery. "<br>" .$conn->error;
 		}
+		header("Location: Blog.php");
 	}
 ?>
 
