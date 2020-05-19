@@ -38,6 +38,7 @@
 				$_SESSION["email"] = $row["email"];
 				$_SESSION["password"] = $row["password"];
 				$_SESSION["loggedIn"] = true;
+				$_SESSION["admin"] = $row["admin"];
 				header("Location: addpost.php");
 			}
 		}
