@@ -57,7 +57,7 @@ input[type=submit], input[type=button] {
 	text-decoration: none;
 }
 
-#message{
+#message, #messageComment{
 	max-width: 100%;
 	min-width: 100%;
 }
