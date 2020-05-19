@@ -21,7 +21,6 @@
 			array_push($entries, $tmp);
 		}
 	}
-	$conn->close();
 ?>
 
 <!Doctype html>
@@ -104,3 +103,5 @@
 		</article>
     </body>
 </html>
+<?php
+	$conn->close();
