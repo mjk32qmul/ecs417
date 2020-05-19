@@ -105,16 +105,16 @@ li {
 
 .nav li{
 	float: left;
-	padding: 1%;
 	text-align: center;
 }
 
-.nav a, li{
+.nav a{
+	padding: 1.5%;
 	color: #f1f1f1;
 	text-decoration: none;
 }
 
-.nav a:hover, li:hover{
+.nav a:hover{
 	background-color: #f1f1f1;
 	color: #1c1c1c;
 }
