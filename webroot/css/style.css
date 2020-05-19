@@ -21,9 +21,8 @@ input[type=submit], input[type=button] {
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 100%;
+	width: 50%;
 	display: block;
-	float: left;
 }
 
 .container {
