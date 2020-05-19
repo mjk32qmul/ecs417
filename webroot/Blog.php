@@ -86,13 +86,15 @@
 						<br/>
 						<p id='contents'>".$entries[$row][2]."</p>
 						</section>
-						<br/>
-						<section id='comment'>
-						<p><span id='username'>".$entries[$row][3][1]."</span>    <span id='time'>(".$entries[$row][3][0].")</span></p>
-						<br/>
-						<p id='contents'>".$entries[$row][3][2]."</p>
-						</section>
 						<br/>";
+						for ($column = 0; $column < count($entries[$row][4]); $column++){
+							echo "<section id='comment'>
+							<p><span id='username'>".$entries[$row][4][$column][1]."</span>    <span id='time'>(".$entries[$row][4][$column][0].")</span></p>
+							<br/>
+							<p id='contents'>".$entries[$row][4][$column][2]."</p>
+							</section>
+							<br/>";
+						}
 						if ($_SESSION["loggedIn"]){
 						echo "<form action='submitComment.php' method='post'>
 							<input name='postID' type='hidden' value='".$entries[$row][3]."'>
