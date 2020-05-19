@@ -100,14 +100,14 @@ li {
 .nav {
     overflow: hidden;
     width: 100%;
-    background-color: lightgreen;
+    background-color: #1c1c1c;
 }
 
     .nav li, h1 {
         float: left;
         padding: 2%;
         text-align: center;
-        color: black;
+        color: #f1f1f1;
         
     }
 
