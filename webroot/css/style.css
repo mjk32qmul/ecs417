@@ -21,12 +21,17 @@ input[type=submit], input[type=button] {
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
+	width: 100%;
 }
 
 #postButtons {
 	display: flex;
   	flex-flow: row wrap;
   	align-items: center;
+}
+
+#postButtons input[type=submit], input[type=button] {
+	width: 50%;
 }
 
 .container {
