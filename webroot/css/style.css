@@ -103,7 +103,7 @@ li {
     background-color: #1c1c1c;
 }
 
-.nav li, h1 {
+.nav li{
 	float: left;
 	padding: 2%;
 	text-align: center;
@@ -114,14 +114,10 @@ li {
 	text-decoration: none;
 }
 
-/*.nav a:active, a:visited, a:link{
-	color: #f1f1f1;
-}
-
 .nav a:hover{
 	background-color: #f1f1f1;
 	color: #1c1c1c;
-}*/
+}
 
 .nav h1 {
 	font: 200% "Lato", sans-serif;
