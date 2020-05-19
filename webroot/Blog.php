@@ -97,8 +97,9 @@
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
 								<textarea name='message' rows='5' cols='100'></textarea><br>
 								<input type='submit'>
-							</form><br/></article>";
+							</form><br/>";
 						}
+						echo "</article>";
 						
 					}
 				}
