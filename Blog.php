@@ -17,7 +17,7 @@
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			$tmp = array($row["time"], $row["username"], $row["contents"]);
+			$tmp = array($row["time"], $row["username"], $row["contents"], $row["ID"]);
 			array_push($entries, $tmp);
 		}
 	}
@@ -73,7 +73,12 @@
 				}
 				else{
 					for ($row = 0; $row < count($entries); $row++){
-						echo "<section id='post'><p><span id='username'>".$entries[$row][1]."</span>    <span id='time'>(".$entries[$row][0].")</span></p><br/><p id='contents'>".$entries[$row][2]."</p></section><br/>";
+						echo "<section id='post'><p><span id='username'>".$entries[$row][1]."</span>    <span id='time'>(".$entries[$row][0].")</span></p><br/><p id='contents'>".$entries[$row][2]."</p></section><br/>
+						<form action='submitComment.php' method='post'>
+							<input name='postID' type='hidden'>".$entries[$row][3]."
+							<textarea name='message' rows='5' cols='100'></textarea><br>
+							<input type='submit'>
+						</form>";
 					}
 				}
 			?>
