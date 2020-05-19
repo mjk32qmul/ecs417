@@ -93,6 +93,7 @@
 								<br/>";
 							}
 						}
+						echo "</article>";
 						if ($_SESSION["loggedIn"]){
 							echo "<form action='submitComment.php' method='post'>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
@@ -100,7 +101,7 @@
 								<input type='submit'>
 							</form>";
 						}
-						echo "</article>";
+						
 					}
 				}
 			?>
