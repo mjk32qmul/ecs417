@@ -35,6 +35,11 @@ input[type=submit], input[type=button] {
 	width: 50%;
 }
 
+#makeComment{
+	color: #2a2b2b;
+	background-color: #f7f7f7;
+}
+
 .container {
   	padding: 16px;
 	background-color: #f7f7f7;
