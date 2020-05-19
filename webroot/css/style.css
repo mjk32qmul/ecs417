@@ -85,6 +85,9 @@ form{
 	white-space: pre-wrap;
 }
 
+#comment{
+	border-left: medium;
+}
 
 
 body {
