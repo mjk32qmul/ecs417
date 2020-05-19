@@ -38,7 +38,7 @@
 					<li><a href="Portfolio.php">Home</a></li>
 					<?php
 						if ($_SESSION["loggedIn"]){
-							echo "<li><a href='addpost.php'>Add Post</a></li>";
+							echo "<li><a href='Logout.php'>Logout</a></li>";
 						}
 						else{
 							echo "<li><a href='Login.html'>Login</a></li>";
@@ -78,12 +78,12 @@
 						<p id='contents'>".$entries[$row][2]."</p>
 						</section>
 						<br/>";
-						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3];
+						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3]."ORDER BY commentID DESC";
 						$resultComments = $conn->query($sqlQueryComments);
 						if ($resultComments->num_rows > 0){
 							while($column = $resultComments->fetch_assoc()){
 								echo "<section id='comment'>
-								<p><span id='username'>".$column["username"]."</span>    <span id='time'>(".$column["username"].")</span></p>
+								<p><span id='username'>".$column["username"]."</span>    <span id='time'>(".$column["time"].")</span></p>
 								<br/>
 								<p id='contents'>".$column["contents"]."</p>
 								</section>
