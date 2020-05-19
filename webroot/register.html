@@ -16,12 +16,13 @@
             </nav>
         </div>
 		<div class="container">
+			<h2>Register</h2>
 			<form action="register.php" method="post">
-				first name: <input type="text" name="firstname"><br/>
-				last name: <input type="text" name="lastname"><br/>
-				username: <input type="text" name="username"><br/>
-				password: <input type="text" name="password"><br/>
-				email: <input type="text" name="email"><br/>
+				first name: <input type="text" name="firstname" pattern="[A-Za-z].{1,}"><br/>
+				last name: <input type="text" name="lastname" pattern="[A-Za-z].{1,}"><br/>
+				username: <input type="text" name="username" pattern="[A-Za-z0-9\s].{1,}"><br/>
+				password: <input type="text" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br/>
+				email: <input type="email" name="email"><br/>
 				submit<input type="submit">
 			</form>
 		</div>

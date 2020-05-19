@@ -20,8 +20,8 @@
 				<h2>Login</h2>
 			</header>
 			<form action="Login.php" method="post">
-				username: <input type="text" name="username">
-				password: <input type="password" name="password">
+				email: <input type="email" name="username">
+				password: <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 				<input type="submit">
 			</form>
 			<a href="register.html" id="register"><input type="button" value="register"></a>

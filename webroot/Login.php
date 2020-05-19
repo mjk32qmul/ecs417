@@ -21,11 +21,11 @@
 		//$username = "Matthew-King";
 
 		$password = $_POST["password"];
-		$username = $_POST["username"];
+		$emial = $_POST["email"];
 		$sha256pass = crypt($password, '$5$anexamplestringforsalt$');
 
 		$sql = "SELECT * FROM USERS WHERE
-		username='".$username."'"."AND password = '".$sha256pass."'";
+		email='".$email."'"."AND password = '".$sha256pass."'";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
