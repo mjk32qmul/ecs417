@@ -53,19 +53,17 @@
 				document.getElementById("message").value = "";
 			}
 		</script>
-		<?php
-			if($_SESSION["loggedIn"] && $_SESSION["admin"] == 1){
-				echo "<div id='addPost'>";
-				echo "<form action='submitPost.php' method='post'>
-					  <textarea id='message' name='message' rows='15' cols='100'></textarea><br/>
-					  <input type='submit'>
-					  </form>
-					  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>";
-				echo "</div>";
-			}
-		?>
 		<article id='blog'>
 			<?php
+				if($_SESSION["loggedIn"] && $_SESSION["admin"] == 1){
+					echo "<div id='addPost'>";
+					echo "<form action='submitPost.php' method='post'>
+						  <textarea id='message' name='message' rows='15' cols='100'></textarea><br/>
+						  <input type='submit'>
+						  </form>
+						  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>";
+					echo "</div>";
+				}
 				if (count($entries) < 1){
 					echo "<section id='post'><p id='contents'>Sorry but there are no posts at the moment. Please check back again later</p>
 					</section>";
