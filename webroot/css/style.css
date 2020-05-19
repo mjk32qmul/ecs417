@@ -43,7 +43,7 @@ header{
 	padding: 1%;
 }
 
-#makeComment{
+#makeComment form{
 	background-color: #2a2b2b;
 	color: #f7f7f7;
 }
@@ -65,6 +65,11 @@ header{
 	background-color: #f7f7f7;
 	color: #2a2b2b;
 	padding: 2%;
+}
+
+#commentTextArea{
+	max-width: 80%;
+	min-width: 80%;
 }
 
 #username, #commentTitle{
