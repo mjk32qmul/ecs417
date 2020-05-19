@@ -88,7 +88,9 @@
 								echo "<section id='comment'>
 								<p><span id='username'>".$column["username"]."</span>    <span id='time'>(".$column["time"].")</span></p>
 								<br/>
-								<p id='contents'>".$column["contents"]."</p>";
+								<p id='contents'>".$column["contents"]."</p>
+								</section>
+								<br/>";
 							}
 						}
 						if ($_SESSION["loggedIn"]){
@@ -96,9 +98,7 @@
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
 								<textarea name='message' rows='5' cols='100'></textarea><br>
 								<input type='submit'>
-							</form>
-							</section>
-							<br/>";
+							</form>";
 						}
 						echo "</article>";
 					}
