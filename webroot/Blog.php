@@ -80,7 +80,7 @@
 						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3]." ORDER BY commentID DESC";
 						$resultComments = $conn->query($sqlQueryComments);
 						
-						echo "<article id='commentSection'>";
+						echo "<article id='commentSection'><p id='commentTitle'>Comments:</p>";
 						
 						if ($resultComments->num_rows > 0){
 							while($column = $resultComments->fetch_assoc()){
