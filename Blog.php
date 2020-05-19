@@ -55,7 +55,7 @@
 			}
 		</script>
 		<?php
-			if($_SESSION["loggedIn"] && $_SESSION["admin"] === 1){
+			if($_SESSION["loggedIn"] && $_SESSION["admin"] == 1){
 				echo "<div id='addPost'>";
 				echo "<form action='submitPost.php' method='post'>
 					  <textarea id='message' name='message' rows='15' cols='100'></textarea><br/>
