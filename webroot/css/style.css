@@ -24,10 +24,6 @@ input[type=submit] {
 	width: 100%;
 }
 
-button:hover {
-  	opacity: 0.8;
-}
-
 .container {
   	padding: 16px;
 	background-color: black;
@@ -35,12 +31,6 @@ button:hover {
 	position: absolute;
 	top: 25%;
 	left: 35%;
-}
-
-header{
-	text-align: center;
-	color: white;
-	padding: 1%;
 }
 
 #message{
@@ -100,11 +90,7 @@ header{
 	padding: 1%
 }
 
-
-body {
-    font: 100% "Lato", sans-serif;
-}
-
+/*the nav menu*/
 .nav ul {
   list-style-type: none;
   margin: 0;
@@ -128,6 +114,10 @@ body {
 .nav li a:hover {
   background-color: #141414;
 }
+
+
+
+
 
 .about, .education {
     position: absolute;
@@ -160,7 +150,6 @@ aside {
     aside#right {
         right: 0%;
     }
-
 
 .reaserch, .skills, .links, .hobbies, .movies {
     padding: 5%;
