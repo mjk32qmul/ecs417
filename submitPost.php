@@ -1,11 +1,11 @@
 <?php
     session_start();
- 	if (!$_SESSION["loggedIn"]){
+ 	if (!$_SESSION["loggedIn"] || $_SESSION["admin"] == 0){
 		header("Location: Login.php");
 	}
 	else{
 		$postContents = $_POST["message"];
-		$sqlQuery = "INSERT INTO POSTS (username,  contents) VALUES('".$_SESSION["username"]."','".$postContents."')";
+		$sqlQuery = "INSERT INTO POSTS (username,  contents, title) VALUES('".$_SESSION["username"]."','".$postContents."','".$_POST["title"]"')";
 		$dbhost = getenv("MYSQL_SERVICE_HOST");
 		//$dbport = getenv("MYSQL_SERVICE_PORT");
 		$dbuser = getenv("DATABASE_USER");

@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <title>My Site</title>
         <link rel="stylesheet" type="text/css" href="webroot/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="weebroot/css/style.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/style.css">
     </head>
     <body>
 		<div class="nav">
@@ -15,13 +15,14 @@
                 </ul>
             </nav>
         </div>
-		<div class="register">
+		<div class="container">
+			<h2>Register</h2>
 			<form action="register.php" method="post">
-				first name: <input type="text" name="firstname"><br/>
-				last name: <input type="text" name="lastname"><br/>
-				username: <input type="text" name="username"><br/>
-				password: <input type="text" name="password"><br/>
-				email: <input type="text" name="email"><br/>
+				first name: <input type="text" name="firstname" pattern="[A-Za-z]"><br/>
+				last name: <input type="text" name="lastname" pattern="[A-Za-z]"><br/>
+				username: <input type="text" name="username" pattern="[A-Za-z0-9\s]"><br/>
+				password: <input type="text" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br/>
+				email: <input type="email" name="email"><br/>
 				submit<input type="submit">
 			</form>
 		</div>

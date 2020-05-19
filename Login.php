@@ -21,11 +21,11 @@
 		//$username = "Matthew-King";
 
 		$password = $_POST["password"];
-		$username = $_POST["username"];
+		$emial = $_POST["email"];
 		$sha256pass = crypt($password, '$5$anexamplestringforsalt$');
 
-		$sql = "SELECT ID, username, password, firstname, lastname, email FROM USERS WHERE
-		username='".$username."'"."AND password = '".$sha256pass."'";
+		$sql = "SELECT * FROM USERS WHERE
+		email='".$email."'"."AND password = '".$sha256pass."'";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
@@ -39,7 +39,7 @@
 				$_SESSION["password"] = $row["password"];
 				$_SESSION["loggedIn"] = true;
 				$_SESSION["admin"] = $row["admin"];
-				header("Location: addpost.php");
+				header("Location: Blog.php");
 			}
 		}
 		$conn->close();

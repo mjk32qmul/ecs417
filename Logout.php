@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	session_destroy();
+	header("Location: Portfolio.php")
 ?>
 <!doctype html>
 <html>
