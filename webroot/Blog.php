@@ -87,11 +87,11 @@
 						<p id='contents'>".$entries[$row][2]."</p>
 						</section>
 						<br/>";
-						for ($column = 0; $column < count($entries[$row][4]); $column++){
+						for ($y = 0; $y < count($entries[$row][4]); $y++){
 							echo "<section id='comment'>
-							<p><span id='username'>".$entries[$row][4][$column][1]."</span>    <span id='time'>(".$entries[$row][4][$column][0].")</span></p>
+							<p><span id='username'>".$entries[$row][4][$y][1]."</span>    <span id='time'>(".$entries[$row][4][$y][0].")</span></p>
 							<br/>
-							<p id='contents'>".$entries[$row][4][$column][2]."</p>
+							<p id='contents'>".$entries[$row][4][$y][2]."</p>
 							</section>
 							<br/>";
 						}
