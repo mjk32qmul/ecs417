@@ -19,7 +19,7 @@
                     <li><a href="#skills">Skills</a></li>
 					<?php
 						if ($_SESSION["loggedIn"]){
-							echo "<li><a href='addpost.php'>Add Post</a></li>";
+							echo "<li><a href='Logout.php'>Logout</a></li>";
 						}
 						else{
 							echo "<li><a href='Login.html'>Login</a></li>";
