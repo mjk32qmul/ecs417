@@ -74,6 +74,10 @@ form{
 	font-weight: bold;
 }
 
+#commentTitle{
+	padding: 1%;
+}
+
 #time{
 	font-weight: lighter;
 }
@@ -85,11 +89,14 @@ form{
 	white-space: pre-wrap;
 }
 
-#commentSection{
+#commentSection, #commentTitle{
 	background-color: #f7f7f7;
 	color: #2a2b2b;
-	padding: 3%;
 	border-left: 0.5em solid #242424!important;
+}
+
+#commentSection{
+	padding: 2%;
 }
 
 
