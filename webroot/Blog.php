@@ -59,11 +59,11 @@
 					echo "<div id='addPost'>";
 					echo "<form action='submitPost.php' method='post'>
 						  <h2>Add Post</h2>
-						  <label for='addPostTitle'>Title:</label><input type='text' id='addPostTitle' name='title' required>
+						  <label for='addPostTitle'>Title:</label><input type='text' id='addPostTitle' name='message' required>
 						  <label for='message'>Contents</label>
 						  <textarea id='message' name='message' rows='15' cols='10000' required></textarea><br/>
 						  <div id='postButtons'>
-						  <input type='submit' onclick='validateInput('makeComment ".$entries[$row][3]."')''>
+						  <input type='submit' onclick='validateInput('message')''>
 						  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>
 						  </div>
 						  </form>";
