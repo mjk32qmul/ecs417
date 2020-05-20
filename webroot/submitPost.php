@@ -26,6 +26,7 @@
 		}
 		header("Location: Blog.php");
 	}
+	$conn->close();
 ?>
 
 <!Doctype html>

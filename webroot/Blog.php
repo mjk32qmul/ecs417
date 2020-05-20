@@ -118,5 +118,18 @@
 		</article>
     </body>
 </html>
+
+<script>
+	function validateInput(var input){
+		var arr = document.getElementById(input);
+		for (var i = 0; i < arr.length; i++){
+			if(isNaN(arr[i].value) || arr[i].value == "") {
+				$(arr[i]).val('').css( "border-color", "red" );
+			}
+		}
+	}
+</script>
+
 <?php
 	$conn->close();
+?>

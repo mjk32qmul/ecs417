@@ -26,7 +26,7 @@
 		echo "Error: ".$sqlQuery. "<br/>" .$conn->error;
 	}
 	header("Location: Portfolio.php");
-	
+	$conn->close();
 ?>
 <!doctype html>
 <html>

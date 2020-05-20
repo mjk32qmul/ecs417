@@ -37,6 +37,7 @@
 		}
 	}
 	header("Location: Blog.php");
+	$conn->close();
 ?>
 
 <!doctype html>
