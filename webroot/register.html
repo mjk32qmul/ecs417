@@ -18,10 +18,10 @@
 		<div class="container">
 			<h2>Register</h2>
 			<form action="register.php" method="post">
-				first name: <input type="text" name="firstname" pattern="[A-Za-z].{1,}"><br/>
-				last name: <input type="text" name="lastname" pattern="[A-Za-z].{1,}"><br/>
-				username: <input type="text" name="username" pattern="[A-Za-z0-9\s].{1,}"><br/>
-				password: <input type="text" name="password" pattern=".{8,}"><br/>
+				first name: <input type="text" name="firstname" pattern=".{1,}" required><br/>
+				last name: <input type="text" name="lastname" pattern=".{1,}" required><br/>
+				username: <input type="text" name="username" pattern=".{1,}" required><br/>
+				password: <input type="text" name="password" pattern=".{8,}" required><br/>
 				email: <input type="email" name="email"><br/>
 				submit<input type="submit">
 			</form>
