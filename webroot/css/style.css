@@ -3,6 +3,11 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: #242424;
+	-ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar{
+	display: none;
 }
 
 input[type=text], input[type=password], input[type=email] {
@@ -140,67 +145,114 @@ input[type=submit], input[type=button] {
   background-color: #141414;
 }
 
+.nav{
+	z-index: 1;
+}
+
+.sticky + .aboutMe{
+	padding-top: 51px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#homePageTitle img{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	position: relative;
+	max-width: 42%;
+	left: 29%;
+}
+
+#parallax{
+	background-image: url(../img/Mountains_gradient.png);
+	min-height: 30em; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#home{
+	background-color: #f7f7f7;
+}
+
+.aboutMe, .skills, .education, .experience, .portfolio, .contact{
+	left: 10%;
+	max-width: 80%;
+	min-width: 80%;
+	background-color: #f7f7f7;
+	color: #2a2b2b;
+	padding: 1%;
+	white-space: pre-wrap;
+	position: relative;
+}
+
+.skills h1, .aboutMe h1{
+	font-size: 200%;
+	text-align: center;
+}
+
+#row{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
 
 
+#column{
+	flex: 1;
+	padding: 1.5%;
+}
+
+.education main, summary{
+	padding: 2%;
+}
+
+#slideShow img, #slideShow video{
+	max-width: 100%;
+	max-height: 45em;
+	min-height: 45em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mySlides {display:none;}
 
 
-.about, .education {
+.prev, .next {
+    cursor: pointer;
     position: absolute;
-    left: 25%;
-    max-width: 90%;
-    max-height: 50%;
-    padding: 1.5%;
-    width: 50%;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 0.5%;
+    font-weight: bold;
+    font-size: 100%;
+    transition: 0.6s ease;
+    user-select: none;
 }
 
-.about img{
-    float: right;
-    max-width: 50%;
+.next {
+  	left: 0;
 }
 
-.education {
-    top: 45%;
+.prev{
+	right: 0;
 }
 
-aside {
-    max-width: 25%;
-    position: absolute;
-    width: 15em;
+.portfolio figcaption, figure, article{
+	text-align: center;
 }
 
-    aside#left {
-        left: 0%;
-    }
+.portfolio a, .contact a{
+	text-decoration: none;
+	color: #2a2b2b;
+} 
 
-    aside#right {
-        right: 0%;
-    }
-
-.reaserch, .skills, .links, .hobbies, .movies {
-    padding: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    background-color: whitesmoke;
-}
-
-.reaserch {
-    color: darksalmon;
-    background-color: antiquewhite;
-}
-
-.links {
-    color: darkmagenta;
-}
-
-.skills h2, .hobbies h2, .movies h2 {
-    background-color: lightgreen;
-    padding: 2%;
-}
-
-.skills li, .hobbies li, .movies li {
-    background-color: white;
-}
-
-.skills img {
-    float: left;
+.portfolio a:hover, .contact a:hover{
+	color: #5c5e5e;
 }
