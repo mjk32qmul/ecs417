@@ -20,10 +20,12 @@
 			$sqlQuery2 = "DELETE FROM COMMENTS WHERE postID=".$_POST["postID"];
 			$result = $conn->query($sqlQuery);
 			$result2 = $conn->query($sqlQUery2);
+			echo "gone 0";
 		}
 		else{
 			$sqlQuery = "DELET FROM COMMENTS WHERE commentID=".$_POST["postID"];
 			$result = $conn->query($sqlQuery);
+			echo "gone 1";
 		}
 	}
 	header("Location: Blog.php");
