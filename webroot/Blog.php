@@ -104,10 +104,10 @@
 							}
 						}
 						if ($_SESSION["loggedIn"]){
-							echo "<br/><form action='submitComment.php' method='post' id='makeComment ".$entries[$row][3]."'><label for'messageComment'>Add Comment</label>
+							echo "<br/><form action='submitComment.php' method='post' id='makeComment'><label for'messageComment'>Add Comment</label>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
-								<textarea name='messageComment' rows='5' cols='1000' id='commentTextArea' required></textarea><br>
-								<input type='submit' onclick='validateInput('makeComment ".$entries[$row][3]."')'>
+								<textarea name='messageComment' rows='5' cols='1000' id='commentTextArea ".$entries[$row][3]."' required></textarea><br>
+								<input type='submit' onclick='validateInput('commentTextArea ".$entries[$row][3]."')'>
 							</form><br/>";
 						}
 						echo "</article><br/>";
