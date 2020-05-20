@@ -59,9 +59,9 @@
 					echo "<div id='addPost'>";
 					echo "<form action='submitPost.php' method='post'>
 						  <h2>Add Post</h2>
-						  <label for='addPostTitle'>Title:</label><input type='text' id='addPostTitle' name='title' pattern='.{1,}'>
+						  <label for='addPostTitle'>Title:</label><input type='text' id='addPostTitle' name='title' required>
 						  <label for='message'>Contents</label>
-						  <textarea id='message' name='message' rows='15' cols='10000' pattern='.{1,}'></textarea><br/>
+						  <textarea id='message' name='message' rows='15' cols='10000' required></textarea><br/>
 						  <div id='postButtons'>
 						  <input type='submit'>
 						  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>
@@ -106,7 +106,7 @@
 						if ($_SESSION["loggedIn"]){
 							echo "<br/><form action='submitComment.php' method='post' id='makeComment'><label for'messageComment'>Add Comment</label>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
-								<textarea name='messageComment' rows='5' cols='1000' id='commentTextArea' pattern='.{1,}'></textarea><br>
+								<textarea name='messageComment' rows='5' cols='1000' id='commentTextArea' required></textarea><br>
 								<input type='submit'>
 							</form><br/>";
 						}
