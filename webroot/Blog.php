@@ -29,17 +29,24 @@
 			document.getElementById("message").value = "";
 		}
 
-		function validateInput(var input, var input2){
-			var arr = document.getElementById(input);
+		function validateInputPost(){
+			var arr = document.getElementById("message");
 			if(isNaN(arr.value) || arr.value == "") {
-				arr.val('').css( "background-color", "red" );
+				arr.style.backgroundColor="red";
 			}
 
 			if (input2!=null){
-				arr = document.getElementById(input2);
+				arr = document.getElementById("addPostTitle");
 				if(isNaN(arr.value) || arr.value == "") {
-					arr.val('').css( "background-color", "red" );
+					arr.style.backgroundColor="red";
 				}
+			}
+		}
+		
+		function validateComment(var postID){
+			var arr = document.getElementById("commentTextArea"+postID);
+			if(isNaN(arr.value) || arr.value == "") {
+				arr.style.backgroundColor="red";
 			}
 		}
 	</script>
@@ -76,7 +83,7 @@
 						  <label for='message'>Contents</label>
 						  <textarea id='message' name='message' rows='15' cols='10000' required></textarea><br/>
 						  <div id='postButtons'>
-						  <input type='submit' onclick='javascript: validateInput(\"message\", \"addPostTitle\");'>
+						  <input type='submit' onclick='javascript: validateInputPost();'>
 						  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>
 						  </div>
 						  </form>";
@@ -119,8 +126,8 @@
 						if ($_SESSION["loggedIn"]){
 							echo "<br/><form action='submitComment.php' method='post' id='makeComment'><label for'messageComment'>Add Comment</label>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
-								<textarea name='messageComment' rows='5' cols='1000' id='commentTextArea' required></textarea><br>
-								<input type='submit')'>
+								<textarea name='messageComment' rows='5' cols='1000' class='commentTextArea' id='commentTextArea".$entries[$row][3]."' required></textarea><br>
+								<input type='submit' onclick='javascript: validateComment(".$entries[$row][3].")')'>
 							</form><br/>";
 						}
 						echo "</article><br/>";
