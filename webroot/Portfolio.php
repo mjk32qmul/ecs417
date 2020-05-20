@@ -214,7 +214,7 @@ function Function() {
 }
 	
 var slideIndex = 1;
-showDivs(slideIndex);
+moveSlides(slideIndex);
 
 function plusDivs(n) {
   moveSlides(slideIndex += n);
