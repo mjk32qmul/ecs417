@@ -22,29 +22,27 @@
 		}
 	}
 ?>
-
-<script>
-	function removeText(){
-		document.getElementById("message").value = "";
-	}
-	
-	function validateInput(var input, var input2){
-		var arr = document.getElementById(input);
-		if(isNaN(arr.value) || arr.value == "") {
-			arr.val('').css( "background-color", "red" );
+<!Doctype html>
+<html>
+	<script>
+		function removeText(){
+			document.getElementById("message").value = "";
 		}
-	
-		if (input2!=null){
-			arr = document.getElementById(input2);
+
+		function validateInput(var input, var input2){
+			var arr = document.getElementById(input);
 			if(isNaN(arr.value) || arr.value == "") {
 				arr.val('').css( "background-color", "red" );
 			}
-		}
-	}
-</script>
 
-<!Doctype html>
-<html>
+			if (input2!=null){
+				arr = document.getElementById(input2);
+				if(isNaN(arr.value) || arr.value == "") {
+					arr.val('').css( "background-color", "red" );
+				}
+			}
+		}
+	</script>
     <head>
         <meta charset="UTF-8" />
         <title>My Site</title>
@@ -121,8 +119,8 @@
 						if ($_SESSION["loggedIn"]){
 							echo "<br/><form action='submitComment.php' method='post' id='makeComment'><label for'messageComment'>Add Comment</label>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
-								<textarea name='messageComment' rows='5' cols='1000' id='commentTextArea ".$entries[$row][3]."' required></textarea><br>
-								<input type='submit' onclick='javascript: validateInput('commentTextArea".$entries[$row][3]."')'>
+								<textarea name='messageComment' rows='5' cols='1000' id='commentTextArea' required></textarea><br>
+								<input type='submit')'>
 							</form><br/>";
 						}
 						echo "</article><br/>";
