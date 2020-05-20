@@ -217,10 +217,10 @@ var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+  moveSlides(slideIndex += n);
 }
 
-function showDivs(n) {
+function moveSlides(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
   if (n > x.length) {slideIndex = 1}
