@@ -27,7 +27,7 @@
 							echo"<li><a href='Logout.php'>Logout</a></li>";
 						}
 						else{
-							echo"<li><a href=''Login''>Login</a></li>";
+							echo"<li><a href='Login.php>Login</a></li>";
 						}
 					?>
 					
