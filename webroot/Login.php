@@ -23,7 +23,7 @@
 		$password = $_POST["password"];
 		$emial = $_POST["email"];
 		$sha256pass = crypt($password, '$5$anexamplestringforsalt$');
-		echo $email;
+		echo "Email:".$email;
 		$sql = "SELECT * FROM USERS WHERE
 		email='".$email."'"."AND password = '".$sha256pass."'";
 		$result = $conn->query($sql);
