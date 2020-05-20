@@ -83,8 +83,8 @@
 						  <label for='message'>Contents</label>
 						  <textarea id='message' name='message' rows='15' cols='10000' required></textarea><br/>
 						  <div id='postButtons'>
-						  <input type='submit' onclick='javascript: validateInputPost();'>
-						  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>
+						  <input type='submit' onclick='validateInputPost();'>
+						  <input type='button' value='Clear' id='clearButton' onclick='removeText();'>
 						  </div>
 						  </form>";
 					echo "</div>";
@@ -127,7 +127,7 @@
 							echo "<br/><form action='submitComment.php' method='post' id='makeComment'><label for'messageComment'>Add Comment</label>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
 								<textarea name='messageComment' rows='5' cols='1000' class='commentTextArea' id='commentTextArea".$entries[$row][3]."' required></textarea><br>
-								<input type='submit' onclick='javascript: validateComment(".$entries[$row][3].")')'>
+								<input type='submit' onclick='validateComment(".$entries[$row][3].")')'>
 							</form><br/>";
 						}
 						echo "</article><br/>";
