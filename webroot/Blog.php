@@ -50,7 +50,7 @@
 				}
 			}
 
-			function validateComment(var postID){
+			function validateComment(postID){
 				var arr = document.getElementById("commentTextArea"+postID);
 				if(isNaN(arr.value) || arr.value == "") {
 					arr.style.backgroundColor="red";
