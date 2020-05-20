@@ -23,6 +23,26 @@
 	}
 ?>
 
+<script>
+	function removeText(){
+		document.getElementById("message").value = "";
+	}
+	
+	function validateInput(var input, var input2){
+		var arr = document.getElementById(input);
+		if(isNaN(arr.value) || arr.value == "") {
+			arr.val('').css( "background-color", "red" );
+		}
+	
+		if (input2!=null){
+			arr = document.getElementById(input2);
+			if(isNaN(arr.value) || arr.value == "") {
+				arr.val('').css( "background-color", "red" );
+			}
+		}
+	}
+</script>
+
 <!Doctype html>
 <html>
     <head>
@@ -58,7 +78,7 @@
 						  <label for='message'>Contents</label>
 						  <textarea id='message' name='message' rows='15' cols='10000' required></textarea><br/>
 						  <div id='postButtons'>
-						  <input type='submit' onclick='javascript: validateInput('message')'>
+						  <input type='submit' onclick='javascript: validateInput(\"message\", \"addPostTitle\");'>
 						  <input type='button' value='Clear' id='clearButton' onclick='javascript: removeText();'>
 						  </div>
 						  </form>";
@@ -101,7 +121,7 @@
 						if ($_SESSION["loggedIn"]){
 							echo "<br/><form action='submitComment.php' method='post' id='makeComment'><label for'messageComment'>Add Comment</label>
 								<input name='postID' type='hidden' value='".$entries[$row][3]."'>
-								<textarea name='messageComment' rows='5' cols='1000' id='commentTextArea' class='commentTextArea".$entries[$row][3]."' required></textarea><br>
+								<textarea name='messageComment' rows='5' cols='1000' id='commentTextArea ".$entries[$row][3]."' required></textarea><br>
 								<input type='submit' onclick='javascript: validateInput('commentTextArea".$entries[$row][3]."')'>
 							</form><br/>";
 						}
@@ -113,22 +133,6 @@
 		</article>
     </body>
 </html>
-
-<script>
-	function removeText(){
-		document.getElementById("message").value = "";
-	}
-	
-	function validateInput(var input){
-		var arr = document.getElementsByClassName(input);
-		for (var i = 0; i < arr.length; i++){
-			if(isNaN(arr[i].value) || arr[i].value == "") {
-				$(arr[i]).val('').css( "background-color", "red" );
-			}
-		}
-	}
-</script>
-
 <?php
 	$conn->close();
 ?>
