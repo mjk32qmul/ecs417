@@ -77,7 +77,7 @@ input[type=submit], input[type=button] {
 	padding: 2%;
 }
 
-#commentTextArea{
+.commentTextArea{
 	max-width: 100%;
 	min-width: 100%;
 }
