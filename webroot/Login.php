@@ -19,6 +19,7 @@
 
 		//$password = "Bananas Ar3 V3ry tasty!";
 		//$username = "Matthew-King";
+		//$email = "ec19115@qmul.ac.uk"
 
 		$password = $_POST["password"];
 		$email = $_POST["email"];
