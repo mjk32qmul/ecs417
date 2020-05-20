@@ -44,7 +44,7 @@
 
 				arr = document.getElementById("addPostTitle");
 				if(isNaN(arr.value) || arr.value == "") {
-					arr.style.backgroundColor="#ff4747;
+					arr.style.backgroundColor="#ff4747";
 				}
 			}
 
