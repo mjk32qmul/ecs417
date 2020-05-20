@@ -17,7 +17,7 @@
 		}
 
 		$username = $_SESSION["username"];
-		$contents = $_POST["message"];
+		$contents = $_POST["messageComment"];
 		$postID = $_POST["postID"];
 
 		$sqlQuery = "INSERT INTO COMMENTS (username, contents, postID) VALUES('".$username."','".$contents."','".$postID."')";
