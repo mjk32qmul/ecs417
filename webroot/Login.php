@@ -21,9 +21,8 @@
 		//$username = "Matthew-King";
 
 		$password = $_POST["password"];
-		$emial = $_POST["email"];
+		$email = $_POST["email"];
 		$sha256pass = crypt($password, '$5$anexamplestringforsalt$');
-		echo "Email:".$email.":".$_POST["email"];
 		$sql = "SELECT * FROM USERS WHERE
 		email='".$email."'"."AND password = '".$sha256pass."'";
 		$result = $conn->query($sql);
