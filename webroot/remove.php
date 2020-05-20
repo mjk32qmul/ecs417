@@ -14,6 +14,8 @@
 		}
 		
 		$postID = $_POST["postID"];*/
+echo $_POST["postType"];
+echo $_POST["deleteButton"];
 		echo $_POST["postID"];
 		print_r($_POST["postID"]);
 		/*if ($_POST["postType"] == 0){
