@@ -21,14 +21,26 @@
 			$result = $conn->query($sqlQuery);
 			$result2 = $conn->query($sqlQUery2);
 			echo "gone 0";
+			if ($result === TRUE){
+				echo "New entry created";
+			}
+			else{
+				echo "Error: ".$sqlQuery. "<br>" .$conn->error;
+			}
 		}
 		else{
 			$sqlQuery = "DELET FROM COMMENTS WHERE commentID=".$_POST["postID"];
 			$result = $conn->query($sqlQuery);
 			echo "gone 1";
+			if ($result === TRUE){
+				echo "New entry created";
+			}
+			else{
+				echo "Error: ".$sqlQuery. "<br>" .$conn->error;
+			}
 		}
 	}
-	header("Location: Blog.php");
+	//header("Location: Blog.php");
 ?>
 
 <!doctype html>
