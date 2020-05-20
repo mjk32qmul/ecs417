@@ -41,10 +41,16 @@
 				if(isNaN(arr.value) || arr.value == "") {
 					arr.style.backgroundColor="#ff4747";
 				}
+				else{
+					arr.style.backgroundColor="#f7f7f7";
+				}
 
 				arr = document.getElementById("addPostTitle");
 				if(isNaN(arr.value) || arr.value == "") {
 					arr.style.backgroundColor="#ff4747";
+				}
+				else{
+					arr.style.backgroundColor="#f7f7f7";
 				}
 			}
 
@@ -52,6 +58,9 @@
 				var arr = document.getElementById("commentTextArea"+postID);
 				if(isNaN(arr.value) || arr.value == "") {
 					arr.style.backgroundColor="#ff4747";
+				}
+				else{
+					arr.style.backgroundColor="#f7f7f7";
 				}
 			}
 		</script>
