@@ -16,9 +16,9 @@
 			die("Connection failed: " . $conn->connect_error);
 		}
 
-		$username = $_SESSION["username"];
-		$contents = $_POST["messageComment"];
-		$postID = $_POST["postID"];
+		$username = htmlspecialchars($_SESSION["username"]);
+		$contents = htmlspecialchars($_POST["messageComment"]);
+		$postID = htmlspecialchars($_POST["postID"]);
 
 		$sqlQuery = "INSERT INTO COMMENTS (username, contents, postID) VALUES('".$username."','".$contents."','".$postID."')";
 

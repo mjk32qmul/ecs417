@@ -12,10 +12,10 @@
 	}
 
 	$password = crypt($_POST["password"],'$5$anexamplestringforsalt$');
-	$username = $_POST["username"];
-	$firstname = $_POST["firstname"];
-	$lastname = $_POST["lastname"];
-	$email = $_POST["email"];
+	$username = htmlspecialchars($_POST["username"]);
+	$firstname = htmlspecialchars($_POST["firstname"]);
+	$lastname = htmlspecialchars($_POST["lastname"]);
+	$email = htmlspecialchars($_POST["email"]);
 	
 	$sql = "INSERT INTO USERS (username, firstname, lastname, password, email, admin) VALUES ('".$username."','".$firstname."','".$lastname."','".$password."','".$email."', 0)";
 	$result = $conn->query($sql);
