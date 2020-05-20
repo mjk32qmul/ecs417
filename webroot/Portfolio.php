@@ -190,9 +190,9 @@ Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo. Velit u
 			<footer id='row'>
 				<section id='column'><h2>Email</h2><p>ec19115@qmul.ac.uk</p></section>
 				<section id='column'><h2>Phone Number</h2><p>07000000000</p></section>
-				<section id='column'><h2>Facebook</h2><a href="www.facebook.com">username</a></section>
-				<section id='column'><h2>Twitter</h2><a href="www.twitter.com">username</a></section>
-				<section id='column'><h2>Instagram</h2><a href="www.instagram.com">username</a></section>
+				<section id='column'><h2>Facebook</h2><a href="https://www.facebook.com">username</a></section>
+				<section id='column'><h2>Twitter</h2><a href="https://www.twitter.com">username</a></section>
+				<section id='column'><h2>Instagram</h2><a href="https://www.instagram.com">username</a></section>
 			</footer>
 		</div>
     </body>

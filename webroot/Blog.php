@@ -123,7 +123,7 @@
 		var arr = document.getElementsByClassName(input);
 		for (var i = 0; i < arr.length; i++){
 			if(isNaN(arr[i].value) || arr[i].value == "") {
-				$(arr[i]).val('').css( "border-color", "red" );
+				$(arr[i]).val('').css( "background-color", "red" );
 			}
 		}
 	}
