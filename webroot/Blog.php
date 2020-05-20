@@ -39,21 +39,19 @@
 			function validateInputPost(){
 				var arr = document.getElementById("message");
 				if(isNaN(arr.value) || arr.value == "") {
-					arr.style.backgroundColor="red";
+					arr.style.backgroundColor="#ff4747";
 				}
 
-				if (input2!=null){
-					arr = document.getElementById("addPostTitle");
-					if(isNaN(arr.value) || arr.value == "") {
-						arr.style.backgroundColor="red";
-					}
+				arr = document.getElementById("addPostTitle");
+				if(isNaN(arr.value) || arr.value == "") {
+					arr.style.backgroundColor="#ff4747;
 				}
 			}
 
 			function validateComment(postID){
 				var arr = document.getElementById("commentTextArea"+postID);
 				if(isNaN(arr.value) || arr.value == "") {
-					arr.style.backgroundColor="red";
+					arr.style.backgroundColor="#ff4747";
 				}
 			}
 		</script>
