@@ -82,7 +82,7 @@
 						<p id='contents'>".$entries[$row][2]."</p>";
 						if ($_SESSION["admin"] == 1){
 							echo "<form action='remove.php' meathod='post'><input name='postID' type='hidden' value='".$entries[$row][3]."'>
-							<input name='deleteButton' type='button' value='delete'></form>";
+							<input name='deleteButton' type='submit' value='delete'></form>";
 						}
 						echo "</section>";
 						$sqlQueryComments = "SELECT * FROM COMMENTS WHERE postID=".$entries[$row][3]." ORDER BY commentID DESC";
@@ -98,7 +98,7 @@
 								<p id='contents'>".$column["contents"]."</p>";
 								if ($_SESSION["admin"] == 1){
 									echo "<form action='remove.php' meathod='post'><input name='postID' type='hidden' value='".$entries[$row][3]."'>
-									<input name='deleteButton' type='button' value='delete'></form>";
+									<input name='deleteButton' type='submit' value='delete'></form>";
 								}
 								echo "<br/></section>";
 							}
