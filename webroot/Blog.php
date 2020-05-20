@@ -38,7 +38,7 @@
 
 			function validateInputPost(){
 				var arr = document.getElementById("message");
-				if(isNaN(arr.value) || arr.value == "") {
+				if(arr.value == "") {
 					arr.style.backgroundColor="#ff4747";
 				}
 				else{
@@ -46,7 +46,7 @@
 				}
 
 				arr = document.getElementById("addPostTitle");
-				if(isNaN(arr.value) || arr.value == "") {
+				if(arr.value == "") {
 					arr.style.backgroundColor="#ff4747";
 				}
 				else{
@@ -56,7 +56,7 @@
 
 			function validateComment(postID){
 				var arr = document.getElementById("commentTextArea"+postID);
-				if(isNaN(arr.value) || arr.value == "") {
+				if(arr.value == "") {
 					arr.style.backgroundColor="#ff4747";
 				}
 				else{
