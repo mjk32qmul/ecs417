@@ -24,32 +24,6 @@
 ?>
 <!Doctype html>
 <html>
-	<script>
-		function removeText(){
-			document.getElementById("message").value = "";
-		}
-
-		function validateInputPost(){
-			var arr = document.getElementById("message");
-			if(isNaN(arr.value) || arr.value == "") {
-				arr.style.backgroundColor="red";
-			}
-
-			if (input2!=null){
-				arr = document.getElementById("addPostTitle");
-				if(isNaN(arr.value) || arr.value == "") {
-					arr.style.backgroundColor="red";
-				}
-			}
-		}
-		
-		function validateComment(var postID){
-			var arr = document.getElementById("commentTextArea"+postID);
-			if(isNaN(arr.value) || arr.value == "") {
-				arr.style.backgroundColor="red";
-			}
-		}
-	</script>
     <head>
         <meta charset="UTF-8" />
         <title>My Site</title>
@@ -57,6 +31,32 @@
         <link rel="stylesheet" type="text/css" href="webroot/css/style.css">
     </head>
     <body>
+		<script>
+			function removeText(){
+				document.getElementById("message").value = "";
+			}
+
+			function validateInputPost(){
+				var arr = document.getElementById("message");
+				if(isNaN(arr.value) || arr.value == "") {
+					arr.style.backgroundColor="red";
+				}
+
+				if (input2!=null){
+					arr = document.getElementById("addPostTitle");
+					if(isNaN(arr.value) || arr.value == "") {
+						arr.style.backgroundColor="red";
+					}
+				}
+			}
+
+			function validateComment(var postID){
+				var arr = document.getElementById("commentTextArea"+postID);
+				if(isNaN(arr.value) || arr.value == "") {
+					arr.style.backgroundColor="red";
+				}
+			}
+		</script>
 		<div class="nav">
             <nav>
                 <ul>
