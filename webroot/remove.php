@@ -19,7 +19,7 @@
 			$sqlQuery = "DELETE FROM POSTS WHERE ID='".$_POST["postID"]."''";
 			$sqlQuery2 = "DELETE FROM COMMENTS WHERE postID='".$_POST["postID"]."''";
 			$result = $conn->query($sqlQuery);
-			$result2 = $conn->query($sqlQUery2);
+			$result2 = $conn->query($sqlQuery2);
 			echo "gone 0";
 			if ($result === TRUE){
 				echo "New entry created";
