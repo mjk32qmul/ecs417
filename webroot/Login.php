@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	if (isset($_SESSION)){
 		header("Location: Portfolio.php");
 	}
@@ -39,7 +39,7 @@
 				$_SESSION["password"] = $row["password"];
 				$_SESSION["loggedIn"] = true;
 				$_SESSION["admin"] = $row["admin"];
-				header("Location: Blog.php");
+				header("Location: Blog.php?error=1");
 			}
 		}
 		$conn->close();
@@ -55,10 +55,29 @@
         <link rel="stylesheet" type="text/css" href="webroot/css/style.css">
     </head>
     <body>
-        <?php
-        if (!$_SESSION["loggedIn"]){
-            echo "an error has occured please try again";
-        }
-        ?>
+		<div class="nav">
+            <nav>
+                <ul>
+					<li><a href="Portfolio.php">Home</a></li>
+					<li><a href="Blog.php">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+		<div class = "login">
+			<header>
+				<h2>Login</h2>
+			</header>
+			<?php
+				if ($_POST["error"] == 1){
+					echo "<p>Sorry an error has occured please try again</p>";
+				}
+			?>
+			<form action="Login.php" method="post">
+				email: <input type="email" name="email">
+				password: <input type="password" name="password" pattern=".{8,}">
+				<input type="submit" value="Login">
+			</form>
+			<a href="register.html" id="register"><input type="button" value="register"></a>
+		</div>
     </body>
 </html>

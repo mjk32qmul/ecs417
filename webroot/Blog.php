@@ -41,7 +41,7 @@
 							echo "<li><a href='Logout.php'>Logout</a></li>";
 						}
 						else{
-							echo "<li><a href='Login.html'>Login</a></li>";
+							echo "<li><a href='Login.php'>Login</a></li>";
 						}
 					?>
 					<li><a href="Blog.php">Blog</a></li>
