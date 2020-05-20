@@ -14,7 +14,7 @@
 		}
 		
 		$postID = $_POST["postID"];*/
-		echo "PostID:".$_POST["postID"]."<br/>";
+		echo $_POST["postID"];
 		/*if ($_POST["postType"] == 0){
 			$sqlQuery = "DELETE FROM POSTS WHERE ID=".$_POST["postID"];
 			$sqlQuery2 = "DELETE FROM COMMENTS WHERE postID=".$_POST["postID"];
@@ -29,7 +29,7 @@
 			}
 		}
 		else{
-			$sqlQuery = "DELET FROM COMMENTS WHERE commentID=".$_POST["postID"];
+			$sqlQuery = "DELETE FROM COMMENTS WHERE commentID=".$_POST["postID"];
 			$result = $conn->query($sqlQuery);
 			echo "gone 1";
 			if ($result === TRUE){
