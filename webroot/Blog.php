@@ -97,7 +97,7 @@
 								<br/>
 								<p id='contents'>".$column["contents"]."</p>";
 								if ($_SESSION["admin"] == 1){
-									echo "<form action='remove.php' method='post'><input name='postID' type='hidden' value='".$entries[$row][3]."'><input name='postType' type='hidden' value='1'>
+									echo "<form action='remove.php' method='post'><input name='postID' type='hidden' value='".$column["commentID"]."'><input name='postType' type='hidden' value='1'>
 									<input name='deleteButton' type='submit' value='delete'></form>";
 								}
 								echo "<br/></section>";
