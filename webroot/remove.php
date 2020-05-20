@@ -14,7 +14,7 @@
 		}
 		
 		$sqlQuery="";
-		echo $_POST["postID"];
+		echo "PostID".$_POST["postID"];
 		if ($_POST["postType"] == 0){
 			$sqlQuery = "DELETE FROM POSTS WHERE ID=".$_POST["postID"];
 			$sqlQuery2 = "DELETE FROM COMMENTS WHERE postID=".$_POST["postID"];
