@@ -14,9 +14,9 @@
 		}
 		
 		$postID = $_POST["postID"];*/
-echo $_POST["postType"];
-echo $_POST["deleteButton"];
-		echo $_POST["postID"];
+		echo "Post Type:".$_POST["postType"];
+		echo "Delete Button:".$_POST["deleteButton"];
+		echo "Post ID:".$_POST["postID"];
 		print_r($_POST["postID"]);
 		/*if ($_POST["postType"] == 0){
 			$sqlQuery = "DELETE FROM POSTS WHERE ID=".$_POST["postID"];
@@ -52,7 +52,6 @@ echo $_POST["deleteButton"];
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
-
 <body>
 </body>
 </html>
