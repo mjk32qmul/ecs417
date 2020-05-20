@@ -1,6 +1,6 @@
 <?php
-	session_start();
-	if($_SESSION["loggedIn"] && $_SESSION["admin"] ==1){ 
+	/*session_start();
+	if($_SESSION["loggedIn"] && $_SESSION["admin"] == 1){ 
 		$dbhost = getenv("MYSQL_SERVICE_HOST");
 		//$dbport = getenv("MYSQL_SERVICE_PORT");
 		$dbuser = getenv("DATABASE_USER");
@@ -13,9 +13,9 @@
 			die("Connection failed: " . $conn->connect_error);
 		}
 		
-		$postID = $_POST["postID"];
-		echo "PostID:".$_POST["postID"].":".$postID."<br/>";
-		if ($_POST["postType"] == 0){
+		$postID = $_POST["postID"];*/
+		echo "PostID:".$_POST["postID"]."<br/>";
+		/*if ($_POST["postType"] == 0){
 			$sqlQuery = "DELETE FROM POSTS WHERE ID=".$_POST["postID"];
 			$sqlQuery2 = "DELETE FROM COMMENTS WHERE postID=".$_POST["postID"];
 			$result = $conn->query($sqlQuery);
@@ -39,7 +39,7 @@
 				echo "Error: ".$sqlQuery. "<br>" .$conn->error;
 			}
 		}
-	}
+	}*/
 	//header("Location: Blog.php");
 ?>
 
